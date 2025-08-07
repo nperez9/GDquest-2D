@@ -1,8 +1,9 @@
-res://practices/L4.P1.boosting_circle/boosting_circle.tscn
-res://addons/gdpractice/assets/theme.tres
 res://practices/L2.P1.bullet/background.tscn
+res://addons/gdpractice/assets/theme.tres
+res://lessons/space_level.tscn
 res://lessons/ship.tscn
 res://practices/L3.P1.character_input/character_input.tscn
 res://practices/L3.P2.character_diagonals/character_diagonals.tscn
+res://practices/L4.P1.boosting_circle/boosting_circle.tscn
 res://practices/L5.P1.steering/steering.tscn
-res://practices/L5.P1.steering/steering.gd
+res://assets/ship/main_thruster/thruster_material.tres

@@ -1,0 +1,10 @@
+{
+    "godotTools.editorPath.godot4": "/Users/nicolas/Desktop/ Godot 4.4.1.app",
+    "files.exclude": {
+        "**/*.import": true,
+        "**/*.tscn": true,
+        "**/*.gd.uid": true,
+        "**/*.gdshader.uid": true,
+        "**/*.tres": true,
+    }
+}
