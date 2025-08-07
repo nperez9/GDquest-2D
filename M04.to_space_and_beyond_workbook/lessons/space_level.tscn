@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1c7bfp34vox3"]
+[gd_scene load_steps=5 format=3 uid="uid://d1c7bfp34vox3"]
 
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="1_dru4e"]
 [ext_resource type="PackedScene" uid="uid://ceh5nmofxwvp1" path="res://lessons/ship.tscn" id="1_f7pcl"]
 [ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship/side_thruster/side_thruster.tscn" id="2_etm7e"]
 [ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship/main_thruster/main_thruster.tscn" id="2_mlqpa"]
 
 [node name="SpaceLevel" type="Node2D"]
+
+[node name="SpaceBackground" parent="." instance=ExtResource("1_dru4e")]
 
 [node name="Ship" parent="." instance=ExtResource("1_f7pcl")]
 
