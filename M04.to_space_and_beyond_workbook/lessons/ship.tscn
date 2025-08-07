@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceh5nmofxwvp1"]
+
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_d1bfu"]
+[ext_resource type="Script" uid="uid://ccwfvkx6smr07" path="res://lessons/ship.gd" id="2_2dafo"]
+
+[node name="Ship" type="Sprite2D"]
+position = Vector2(828, 561)
+texture = ExtResource("1_d1bfu")
+script = ExtResource("2_2dafo")
+
+[node name="DashTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="DashCooldown" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]

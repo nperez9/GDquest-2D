@@ -1,0 +1,18 @@
+{
+  "assets/energy.svg": "10e8cfffc36fb787ed8db0df048d5069",
+  "assets/energy.svg.import": "1458e79258c0e073485c01876febaa06",
+  "assets/fire.svg": "d2013a1188c9d341ed344876a396f6d0",
+  "assets/fire.svg.import": "a346710c7f33980b5dc2a50b14ce2dc7",
+  "assets/health.svg": "99133fc5ca6b995946a79624ecb79f85",
+  "assets/health.svg.import": "9783d6f019fdf91104e86b0715851d90",
+  "assets/poison.svg": "9ce55e575daa4a0c6d68c3f8396d6c86",
+  "assets/poison.svg.import": "5e2bb157d431f1fb9f24200453c6efb9",
+  "assets/triforce.svg": "8b3ffb1ee5ad7b61985f299ca6d96417",
+  "assets/triforce.svg.import": "45649176cfce799d329b182bf64c3d81",
+  "assets/water.svg": "68a220f92a33a67c305e6bc2e8b4aec8",
+  "assets/water.svg.import": "6acbf0250037594491db1be894c03ee1",
+  "power.gd": "d6a9f9e73efac868fa659ce638428ecd",
+  "powered_inventory.gd": "bfe7bd45d8f5f6ed9e8684ce9f51bf74",
+  "powered_inventory.tscn": "3a6d1f7f69315020f1df48df18f2ae09",
+  "powered_item.gd": "abe2df09553cd980f98f453e4d084e36"
+}

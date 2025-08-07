@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfrp0km2xjcr6"]
+
+[ext_resource type="Script" uid="uid://c8bobnn0pww6u" path="res://game.gd" id="2"]
+[ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_vnf5n"]
+[ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tileset_invisible_walls.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dds7yrrx56gcy" path="res://player/player.tscn" id="4_g38d0"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="5_pob1m"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_gophc"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_p0nl4"]
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="8_pob1m"]
+[ext_resource type="PackedScene" uid="uid://cce7r30dfjm4r" path="res://interface/bars/ui_health_bar.tscn" id="9_gophc"]
+
+[node name="Start" type="Node2D"]
+script = ExtResource("2")
+
+[node name="Bridges" type="TileMap" parent="."]
+tile_set = ExtResource("2_vnf5n")
+format = 2
+layer_0/name = "Bridges"
+layer_0/tile_data = PackedInt32Array(589812, 65536, 1, 589813, 0, 1, 589814, 0, 1, 589815, 0, 1, 589816, 131072, 1, 196608, 262144, 1, 131072, 196608, 1, 65536, 65536, 0, 65537, 0, 1, 65538, 196608, 0, 2, 196608, 1, -65534, 327680, 1)
+metadata/_edit_lock_ = true
+
+[node name="InvisibleWalls" type="TileMap" parent="."]
+tile_set = ExtResource("3")
+format = 2
+layer_0/name = "Invisible walls"
+layer_0/tile_data = PackedInt32Array(524278, 0, 0, 524277, 0, 0, 524279, 0, 0, 655349, 0, 0, 655350, 0, 0, 655351, 0, 0, 196607, 0, 0, 131071, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 65539, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("4_g38d0")]
+position = Vector2(-2176, 1024)
+
+[node name="RoomA" parent="." instance=ExtResource("5_pob1m")]
+position = Vector2(-2944, 512)
+
+[node name="RoomB" parent="." instance=ExtResource("6_gophc")]
+position = Vector2(-896, 512)
+
+[node name="RoomC" parent="." instance=ExtResource("7_p0nl4")]
+position = Vector2(-896, -1408)
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("8_pob1m")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIHealthBar" parent="CanvasLayer" instance=ExtResource("9_gophc")]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 378.0
+offset_bottom = 132.725
+
+[connection signal="health_changed" from="Player" to="CanvasLayer/UIHealthBar" method="_on_player_health_changed"]
