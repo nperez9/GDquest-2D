@@ -1,5 +1,4 @@
-extends Sprite2D
-
+extends Area2D
 
 var max_speed := 1200.0
 var velocity := Vector2(0, 0)

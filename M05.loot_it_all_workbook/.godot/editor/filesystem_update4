@@ -1,0 +1,11 @@
+res://addons/gdpractice/assets/theme.tres
+res://assets/ship_visual_effects/main_thruster/thruster_material.tres
+res://assets/background/space_material.tres
+res://lessons/health_pack.tscn
+res://lessons/health_pack.gd
+res://lessons/space_level.tscn
+res://practices/L2.P1.pop_the_ball/ball.tscn
+res://practices/L2.P1.pop_the_ball/ball.gd
+res://practices/L2.P1.pop_the_ball/pop_the_ball.tscn
+res://lessons/ship.tscn
+res://lessons/ship.gd
