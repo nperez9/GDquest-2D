@@ -13,3 +13,9 @@ position = Vector2(946, 546)
 
 [node name="HealthPack" parent="." instance=ExtResource("3_etm7e")]
 position = Vector2(752, 416)
+
+[node name="HealthPack2" parent="." instance=ExtResource("3_etm7e")]
+position = Vector2(1064, 808)
+
+[node name="HealthPack3" parent="." instance=ExtResource("3_etm7e")]
+position = Vector2(1112, 456)
