@@ -8,8 +8,12 @@ var energy := 20.0
 
 
 func _ready() -> void:
-	get_node("UI/EnergyBar").value = energy
+	set_energy(energy)
+	area_entered.connect(_on_area_entered)
 
+func set_energy(_energy: int):
+	energy = _energy
+	get_node("UI/EnergyBar").value = energy
 
 func _process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -24,4 +28,5 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	pass
+	set_energy(energy + 20)
+	

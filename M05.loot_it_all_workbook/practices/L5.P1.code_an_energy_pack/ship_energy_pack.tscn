@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://b6kc24qg2yyuq"]
 
-[ext_resource type="Script" path="res://practices/L5.P1.code_an_energy_pack/ship_energy_pack.gd" id="1_dk3h4"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_white.png" id="2_6y0bb"]
-[ext_resource type="Texture2D" path="res://assets/practice_assets/shape_ship.png" id="3_gmwji"]
+[ext_resource type="Script" uid="uid://17jpxp5lpbw3" path="res://practices/L5.P1.code_an_energy_pack/ship_energy_pack.gd" id="1_dk3h4"]
+[ext_resource type="Texture2D" uid="uid://bkueifls7csiy" path="res://assets/practice_assets/ellipse_white.png" id="2_6y0bb"]
+[ext_resource type="Texture2D" uid="uid://d1xp2mgpkkc42" path="res://assets/practice_assets/shape_ship.png" id="3_gmwji"]
 
 [sub_resource type="Curve" id="Curve_f7g5y"]
 _data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
