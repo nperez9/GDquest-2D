@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://tg070abxe4kn"]
+
+[ext_resource type="Script" uid="uid://c3p5sthdk8p8a" path="res://lessons/radom_item_placer.gd" id="1_e05o3"]
+
+[node name="RadomItemPlacer" type="Node2D"]
+script = ExtResource("1_e05o3")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

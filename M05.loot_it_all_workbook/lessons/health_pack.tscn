@@ -7,6 +7,7 @@
 radius = 24.0
 
 [node name="HealthPack" type="Area2D" groups=["health_pack"]]
+collision_layer = 2
 script = ExtResource("1_ht84s")
 
 [node name="HealthIcon" type="Sprite2D" parent="."]

@@ -19,6 +19,7 @@ corner_radius_bottom_left = 4
 [sub_resource type="SystemFont" id="SystemFont_5xifn"]
 font_names = PackedStringArray("Monospace")
 font_weight = 575
+subpixel_positioning = 0
 msdf_pixel_range = 18
 
 [sub_resource type="LabelSettings" id="LabelSettings_h3paj"]
@@ -26,7 +27,8 @@ font_size = 18
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Area2D"]
+[node name="Sprite2D" type="Area2D" groups=["player"]]
+collision_mask = 3
 script = ExtResource("4_p1sls")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -81,3 +83,8 @@ label_settings = SubResource("LabelSettings_h3paj")
 position = Vector2(-18, -88)
 scale = Vector2(0.510478, 0.510478)
 texture = ExtResource("5_h3paj")
+
+[node name="DeathTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.3
+autostart = true
