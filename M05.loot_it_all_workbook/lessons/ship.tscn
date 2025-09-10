@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmv50krf4bo5r"]
+[gd_scene load_steps=10 format=3 uid="uid://dmv50krf4bo5r"]
 
 [ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="3_pdppw"]
 [ext_resource type="Script" uid="uid://bwkr2t4ku15qq" path="res://lessons/ship.gd" id="4_p1sls"]
+[ext_resource type="Texture2D" uid="uid://d0bh8am2qd005" path="res://assets/gem_icon.png" id="5_h3paj"]
 [ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship_visual_effects/main_thruster/main_thruster.tscn" id="5_q7c3l"]
 [ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship_visual_effects/side_thruster/side_thruster.tscn" id="6_1updt"]
 
@@ -14,6 +15,16 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="SystemFont" id="SystemFont_5xifn"]
+font_names = PackedStringArray("Monospace")
+font_weight = 575
+msdf_pixel_range = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_h3paj"]
+font_size = 18
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Area2D"]
 script = ExtResource("4_p1sls")
@@ -53,3 +64,20 @@ offset_bottom = -56.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_5xifn")
 value = 50.0
 show_percentage = false
+
+[node name="GemLabel" type="Label" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = -96.0
+offset_right = 42.0
+offset_bottom = -73.0
+theme_override_fonts/font = SubResource("SystemFont_5xifn")
+theme_override_font_sizes/font_size = 20
+text = "x0"
+label_settings = SubResource("LabelSettings_h3paj")
+
+[node name="GemIcon" type="Sprite2D" parent="UI"]
+position = Vector2(-18, -88)
+scale = Vector2(0.510478, 0.510478)
+texture = ExtResource("5_h3paj")
