@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbvtbcpqxuqyr"
-path="res://.godot/imported/candy_green.png-b9a1250c457112a5703b428ee0d597fd.ctex"
+path="res://.godot/imported/candy_green.png-0e18add4fdbdfc4dba66fa49c3a0f6a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/candy/candy_green.png"
-dest_files=["res://.godot/imported/candy_green.png-b9a1250c457112a5703b428ee0d597fd.ctex"]
+source_file="res://practices/L6.P1.the_pinata/candy/candy_green.png"
+dest_files=["res://.godot/imported/candy_green.png-0e18add4fdbdfc4dba66fa49c3a0f6a6.ctex"]
 
 [params]
 

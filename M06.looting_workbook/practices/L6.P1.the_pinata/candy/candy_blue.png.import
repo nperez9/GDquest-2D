@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s06ofcyqp6ru"
-path.s3tc="res://.godot/imported/candy_blue.png-0bbf4fb46bc02fef8d193007ad1c3d5e.s3tc.ctex"
+path.s3tc="res://.godot/imported/candy_blue.png-0dd89e4b141fd768357b816c8c1aa530.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/candy/candy_blue.png"
-dest_files=["res://.godot/imported/candy_blue.png-0bbf4fb46bc02fef8d193007ad1c3d5e.s3tc.ctex"]
+source_file="res://practices/L6.P1.the_pinata/candy/candy_blue.png"
+dest_files=["res://.godot/imported/candy_blue.png-0dd89e4b141fd768357b816c8c1aa530.s3tc.ctex"]
 
 [params]
 
