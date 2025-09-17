@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://da0wp2kdpes7i"]
 
-[ext_resource type="Script" path="res://practices/L5.P1.open_the_door/door.gd" id="1_lkdka"]
-[ext_resource type="Material" path="res://practices/L5.P1.open_the_door/material.tres" id="2_rm1ck"]
-[ext_resource type="Texture2D" path="res://practices/L5.P1.open_the_door/door_hinge.png" id="3_e4vx4"]
-[ext_resource type="Texture2D" path="res://practices/L5.P1.open_the_door/door_body.png" id="4_10o0v"]
+[ext_resource type="Script" uid="uid://bjrpr243h53tp" path="res://practices/L5.P1.open_the_door/door.gd" id="1_lkdka"]
+[ext_resource type="Material" uid="uid://bea3lj1m2qape" path="res://practices/L5.P1.open_the_door/material.tres" id="2_rm1ck"]
+[ext_resource type="Texture2D" uid="uid://1t3pjx2jmrtp" path="res://practices/L5.P1.open_the_door/door_hinge.png" id="3_e4vx4"]
+[ext_resource type="Texture2D" uid="uid://r0f5ky2kx4qc" path="res://practices/L5.P1.open_the_door/door_body.png" id="4_10o0v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h3xna"]
 radius = 31.0

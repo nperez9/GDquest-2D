@@ -63,12 +63,28 @@ func _spawn_random_item() -> void:
 	var random_direction := Vector2(1.0, 0.0).rotated(random_angle)
 	## distance of the item to fly away
 	var random_distance := randf_range(60.0, 130.0)
-	var itemPosition := random_direction * random_distance
+	var land_position := random_direction * random_distance
 	
 	var loot_item: Area2D = possible_items.pick_random().instantiate()
 	add_child(loot_item)
+	
+	## anim begis 
+	const FLIGHT_TIME := 0.4
+	const HALF_FLIGHT_TIME := FLIGHT_TIME / 2.0
+	
+	loot_item.scale = Vector2(0.25, 0.25)
 	var tween = create_tween()
-	tween.tween_property(loot_item, "position", itemPosition, 0.3)
+	tween.set_parallel(true)
+	tween.tween_property(loot_item, "scale", Vector2.ONE, HALF_FLIGHT_TIME)
+	tween.tween_property(loot_item, "position:x", land_position.x, FLIGHT_TIME)
+	
+	var jump_tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	var jump_position = land_position.y - randf_range(30.0, 80.0)
+	jump_tween.tween_property(loot_item, "position:y", jump_position, HALF_FLIGHT_TIME)
+	jump_tween.set_ease(tween.EASE_IN)
+	jump_tween.tween_property(loot_item, "position:y", land_position.y, HALF_FLIGHT_TIME)
+	
+	
 	
 ## !IMPORTANT
 ## When you create a tween, it's a throwaway thing. You create the tween, use it, and then forget about it. Calling a function like tween_method() registers an animation for the engine to run, and when the animation ends, the engine erases the tween from memory for us.

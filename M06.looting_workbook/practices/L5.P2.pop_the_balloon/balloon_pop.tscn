@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://6tbgcoceivac"]
 
-[ext_resource type="Script" path="res://practices/L5.P2.pop_the_balloon/balloon_pop.gd" id="1_8d6qb"]
-[ext_resource type="Material" path="res://practices/L5.P2.pop_the_balloon/material.tres" id="2_y8dts"]
-[ext_resource type="Texture2D" path="res://practices/L5.P2.pop_the_balloon/balloon_tail.png" id="3_nbqbm"]
-[ext_resource type="Texture2D" path="res://practices/L5.P2.pop_the_balloon/balloon_top.png" id="4_13xkd"]
+[ext_resource type="Script" uid="uid://btlfs8v0hnhyj" path="res://practices/L5.P2.pop_the_balloon/balloon_pop.gd" id="1_8d6qb"]
+[ext_resource type="Material" uid="uid://bh8me21qj0etl" path="res://practices/L5.P2.pop_the_balloon/material.tres" id="2_y8dts"]
+[ext_resource type="Texture2D" uid="uid://bnfm17ejohcbd" path="res://practices/L5.P2.pop_the_balloon/balloon_tail.png" id="3_nbqbm"]
+[ext_resource type="Texture2D" uid="uid://oyf7maqtrbvs" path="res://practices/L5.P2.pop_the_balloon/balloon_top.png" id="4_13xkd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6fgqy"]
 radius = 47.0

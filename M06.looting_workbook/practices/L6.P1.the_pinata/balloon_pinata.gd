@@ -22,20 +22,21 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_index: int):
 	if event_is_mouse_click:
 		input_pickable = false
 		# Create three candies! Hint: change the for loop range to spawn multiple candies.
-		for current_index in range(0):
+		for current_index in range(3):
 			spawn_candy()
 
 
 func spawn_candy() -> void:
 	# Instantiate and add a random candy as a child of the piñata.
 	# Use the possible_candies.pick_random() function to pick a random candy.
-	var candy: Node2D = null
+	var candy: Node2D = possible_candies.pick_random().instantiate()
 	add_child(candy)
 
 	# Complete the variables to calculate a random position in a circle using polar coordinates.
-	var random_angle := 0.0
-	var random_direction := Vector2()
+	var random_angle := randf_range(0.0, 2 * PI)
+	var random_direction := Vector2(1.0, 0).rotated(random_angle)
 	# The random distance should be a random value between 0 and 100.
-	var random_distance := 0.0
+	var random_distance := randf_range(0, 100)
 
 	# Finally, position the candy at the calculated random position.
+	candy.position = random_distance * random_direction
