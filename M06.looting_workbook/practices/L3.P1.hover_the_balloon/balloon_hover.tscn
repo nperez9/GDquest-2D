@@ -1,12 +1,19 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://c4nsseqkxwgto"]
 
-[ext_resource type="Script" path="res://practices/L3.P1.hover_the_balloon/balloon_hover.gd" id="1_850r7"]
-[ext_resource type="Texture2D" path="res://practices/L3.P1.hover_the_balloon/balloon_tail.png" id="2_yn8xh"]
-[ext_resource type="Texture2D" path="res://practices/L3.P1.hover_the_balloon/balloon_top.png" id="3_qcjeh"]
+[ext_resource type="Script" uid="uid://2s83r0vqal3y" path="res://practices/L3.P1.hover_the_balloon/balloon_hover.gd" id="1_850r7"]
+[ext_resource type="Shader" uid="uid://51quxb410xcj" path="res://practices/L3.P1.hover_the_balloon/group_outline.gdshader" id="2_qcjeh"]
+[ext_resource type="Texture2D" uid="uid://cf487car4l5gm" path="res://practices/L3.P1.hover_the_balloon/balloon_tail.png" id="2_yn8xh"]
+[ext_resource type="Texture2D" uid="uid://b1adpk1vpdh7r" path="res://practices/L3.P1.hover_the_balloon/balloon_top.png" id="3_qcjeh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cs4t6"]
 radius = 47.0
 height = 166.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vdu37"]
+shader = ExtResource("2_qcjeh")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 4.0
+shader_parameter/viewport_scale = Vector2(1, 1)
 
 [node name="BalloonHover" type="Area2D"]
 position = Vector2(960, 540)
@@ -19,6 +26,7 @@ position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_cs4t6")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
+material = SubResource("ShaderMaterial_vdu37")
 position = Vector2(0, 33)
 
 [node name="Tail" type="Sprite2D" parent="CanvasGroup"]
