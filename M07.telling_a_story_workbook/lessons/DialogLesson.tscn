@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdcwlc5e8v1ks"]
+[gd_scene load_steps=7 format=3 uid="uid://bdcwlc5e8v1ks"]
 
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_ascr4"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_8xlcf"]
@@ -12,6 +12,9 @@ shader_parameter/bg_color = Color(0.400356, 0.644424, 0.999992, 1)
 shader_parameter/pattern_color = Color(0.701046, 0.84809, 1, 1)
 shader_parameter/pattern_size = 200.0
 
+[sub_resource type="SystemFont" id="SystemFont_7bmoj"]
+font_italic = true
+
 [node name="DialogLesson" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -19,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_vertical_guides_ = [960.0]
+metadata/_edit_vertical_guides_ = [960.0, 1856.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_7bmoj")
@@ -59,3 +62,32 @@ texture = ExtResource("4_7bmoj")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.007
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 240.44
+offset_right = -64.0
+offset_bottom = -480.0
+text = "Hello World!!! ASDSASD"
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -136.0
+offset_right = -65.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_7bmoj")
+text = "Next"
