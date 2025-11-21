@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ogu21ixgdm50" path="res://assets/test.svg" id="1_nwuo2"]
 
-[node name="Dialogue" type="Control"]
+[node name="Anchros" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
