@@ -1,4 +1,65 @@
-[gd_resource type="Theme" format=3 uid="uid://chw1gp86puvqd"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://chw1gp86puvqd"]
+
+[ext_resource type="StyleBox" uid="uid://be0fetto48a8b" path="res://lessons/text-background-stylebox.tres" id="1_2fqkg"]
+[ext_resource type="StyleBox" uid="uid://bd5lffxsh4gli" path="res://lessons/button-black.tres" id="1_g25ke"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdckw"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.243137, 0.321569, 0.784314, 1)
+draw_center = false
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.666692, 0.298336, 0.0672867, 1)
+border_blend = true
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyx53"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.245008, 0.323469, 0.782689, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g25ke"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.245008, 0.323469, 0.782689, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdx3j"]
+bg_color = Color(0.853917, 0.853917, 0.853917, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fqkg"]
+bg_color = Color(1, 1, 1, 1)
 
 [resource]
 default_font_size = 48
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/styles/disabled = ExtResource("1_g25ke")
+Button/styles/focus = SubResource("StyleBoxFlat_pdckw")
+Button/styles/hover = SubResource("StyleBoxFlat_hyx53")
+Button/styles/normal = ExtResource("1_g25ke")
+Button/styles/pressed = SubResource("StyleBoxFlat_g25ke")
+RichTextLabel/colors/default_color = Color(0.226707, 0.226707, 0.226707, 1)
+RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.875361, 0.691877, 0.755501, 0)
+RichTextLabel/styles/background = SubResource("StyleBoxFlat_bdx3j")
+RichTextLabel/styles/fill = SubResource("StyleBoxFlat_2fqkg")
+RichTextLabel/styles/normal = ExtResource("1_2fqkg")
