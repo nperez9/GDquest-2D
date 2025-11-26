@@ -2,3 +2,16 @@ res://lessons/DialogLesson.tscn
 res://lessons/Anchros.tscn
 res://lessons/dialogLesson-theme.tres
 res://lessons/button-black.tres
+res://lessons/dialogue.gd
+res://addons/gdpractice/assets/theme.tres
+res://practices/L5.P1.pick_correct_response/assets/practice_exercises_theme.tres
+res://practices/L5.P2.text_slideshow/assets/practice_exercises_theme.tres
+res://practices/L6.P1.poetry/assets/practice_exercises_theme.tres
+res://practices/L6.P2.typewriter/assets/practice_exercises_theme.tres
+res://practices/L8.P1.pick_your_character/assets/practice_exercises_theme.tres
+res://practices/L10.P1.image_slideshow/assets/practice_exercises_theme.tres
+res://practices/L10.P2.party_members/assets/practice_exercises_theme.tres
+res://practices/L5.P1.pick_correct_response/pick_correct_response.tscn
+res://practices/L5.P1.pick_correct_response/pick_correct_response.gd
+res://practices/L5.P2.text_slideshow/text_slideshow.tscn
+res://practices/L5.P2.text_slideshow/text_slideshow.gd
