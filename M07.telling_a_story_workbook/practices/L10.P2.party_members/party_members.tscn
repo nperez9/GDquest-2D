@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://d0of3n4ni3k8b"]
 
-[ext_resource type="Material" path="res://practices/L10.P2.party_members/assets/practice_background_material.tres" id="1_7rtxs"]
-[ext_resource type="Theme" path="res://practices/L10.P2.party_members/assets/practice_exercises_theme.tres" id="2_pxvyq"]
-[ext_resource type="Script" path="res://practices/L10.P2.party_members/party_members.gd" id="3_tk8em"]
+[ext_resource type="Material" uid="uid://dvpewvoevfv4i" path="res://practices/L10.P2.party_members/assets/practice_background_material.tres" id="1_7rtxs"]
+[ext_resource type="Theme" uid="uid://cikdnop5etmcl" path="res://practices/L10.P2.party_members/assets/practice_exercises_theme.tres" id="2_pxvyq"]
+[ext_resource type="Script" uid="uid://dt34ua5yqxctd" path="res://practices/L10.P2.party_members/party_members.gd" id="3_tk8em"]
 
 [node name="PartyMembers" type="ColorRect"]
 material = ExtResource("1_7rtxs")
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2

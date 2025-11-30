@@ -13,11 +13,8 @@ var expressions := {
 
 @onready var character: TextureRect = %Character
 @onready var eyes_with_a_face: TextureRect = %EyesWithAFace
-@onready var button_sofia: Button = %ButtonSofia
-@onready var button_pink: Button = %ButtonPink
-@onready var button_regular: Button = %ButtonRegular
-@onready var button_happy: Button = %ButtonHappy
-@onready var button_sad: Button = %ButtonSad
+@onready var expressions_row: HBoxContainer = %ExpressionsRow
+@onready var body_row: HBoxContainer = %BodyRow
 
 var current_state := {
 	"body": null,
@@ -27,16 +24,22 @@ var current_state := {
 func _ready() -> void:
 	character.texture = bodies["sofia"]
 	eyes_with_a_face.texture = expressions["regular"]
-	
-	button_sofia.pressed.connect(change_body.bind("sofia"))
-	button_pink.pressed.connect(change_body.bind("pink"))
-	
-	button_regular.pressed.connect(change_expression.bind("regular"))
-	button_happy.pressed.connect(change_expression.bind("happy"))
-	button_sad.pressed.connect(change_expression.bind("sad"))
+	create_buttons()
 
 func change_body(body_key: String) -> void:
 	character.texture = bodies[body_key]
 
 func change_expression(expression_key: String) -> void:
 	eyes_with_a_face.texture = expressions[expression_key]
+
+func create_buttons() -> void:
+	for body_key: String in bodies.keys():
+		var button := Button.new()
+		button.text = body_key.capitalize()
+		button.pressed.connect(change_body.bind(body_key))
+		body_row.add_child(button)
+	for expression_key: String in expressions.keys():
+		var button := Button.new()
+		button.text = expression_key.capitalize()
+		button.pressed.connect(change_expression.bind(expression_key))
+		expressions_row.add_child(button)

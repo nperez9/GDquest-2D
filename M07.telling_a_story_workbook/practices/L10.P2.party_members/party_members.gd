@@ -28,20 +28,23 @@ func _ready() -> void:
 
 # displays the party member's portrait and its name
 func show_party_member() -> void:
-	# make sure to display the member's image
-	# make sure to display the member's name
-	pass
+	rich_text_label.text = items[item_index]["name"]
+	texture_rect.texture = items[item_index]["portrait"]
 
 # Increments the index each time is called.
 func advance() -> void:
 	# make sure to increment the `item_index`
+	item_index += 1
 	if item_index >= items.size():
 		item_index = 0
+	show_party_member()
 	# Don't forget to call the show_party_member function
 
 # Decrements the index each time is called.
 func rewind() -> void:
 	# make sure to decrement the `item_index`
+	item_index -= 1
 	if item_index < 0:
 		item_index = items.size() - 1
+	show_party_member()
 	# Don't forget to call the show_party_member function

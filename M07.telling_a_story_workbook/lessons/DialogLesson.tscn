@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdcwlc5e8v1ks"]
+[gd_scene load_steps=11 format=3 uid="uid://bdcwlc5e8v1ks"]
 
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_ascr4"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_8xlcf"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://chw1gp86puvqd" path="res://lessons/dialogLesson-theme.tres" id="5_8rrv1"]
 [ext_resource type="Script" uid="uid://drrmaopaurs2d" path="res://lessons/dialogue.gd" id="6_vmi0j"]
 [ext_resource type="AudioStream" uid="uid://bm2mvov4dm0aw" path="res://assets/talking_synth_alternate.ogg" id="7_agd8w"]
+[ext_resource type="AudioStream" uid="uid://bafjgt7eu3x5a" path="res://assets/talking_synth.ogg" id="8_bd152"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7bmoj"]
 shader = ExtResource("1_ascr4")
@@ -39,6 +40,7 @@ grow_vertical = 2
 color = Color(1, 1, 0.588235, 1)
 
 [node name="Character" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.5
@@ -52,6 +54,7 @@ stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="EyesWithAFace" type="TextureRect" parent="Character"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.149
@@ -119,6 +122,10 @@ theme_override_fonts/font = SubResource("SystemFont_7bmoj")
 text = "Back
 "
 
-[node name="CharacterVoice" type="AudioStreamPlayer" parent="."]
+[node name="CharacterVoiceSophia" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("7_agd8w")
+
+[node name="CharacterVoicePink" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_bd152")
