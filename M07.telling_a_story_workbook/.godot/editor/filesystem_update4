@@ -20,3 +20,6 @@ res://practices/L6.P1.poetry/poetry.gd
 res://practices/L6.P2.typewriter/typewriter.tscn
 res://practices/L6.P2.typewriter/typewriter.gd
 res://lessons/test/TestLesson.tscn
+res://lessons/test/expressions.gd
+res://practices/L8.P1.pick_your_character/pick_your_character.tscn
+res://practices/L8.P1.pick_your_character/pick_your_character.gd
