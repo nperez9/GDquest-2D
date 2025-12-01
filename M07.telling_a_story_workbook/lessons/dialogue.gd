@@ -19,52 +19,55 @@ var expressions := {
 	"happy": preload("res://assets/emotion_happy.png")
 }
 
+var text_tween: Tween = null
+var character_tween: Tween = null
+
 @onready var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "I've been studying arrays and dictionaries lately.",
+		"text": "I've been studying [wave] arrays and dictionaries lately[/wave].",
 		"character": bodies["sophia"],
 		"voice": character_voice_sophia,
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Oh, nice. How has it been going?",
+		"text": "Oh, nice. [i]How has it been going?[/i]",
 		"character": bodies["pink"],
 		"voice": character_voice_pink,
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "Well... it's a little complicated!",
+		"text": "Well... it's a [shake]little complicated![/shake]",
 		"character": bodies["sophia"],
 		"voice": character_voice_sophia,
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "Oh!",
+		"text": "Oh!...",
 		"character": bodies["pink"],
 		"voice": character_voice_pink,
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "It sure takes time to click at first.",
+		"text": "[rainbow]It sure takes time to click at first.[/rainbow]",
 		"character": bodies["pink"],
 		"voice": character_voice_pink,
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "If you keep at it, eventually, you'll get the hang of it!",
+		"text": "If you keep at it, eventually, [tornado]you'll get the hang of it![/tornado]",
 		"character": bodies["pink"],
 		"voice": character_voice_pink,
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Mhhh... I see. I'll keep at it, then.",
+		"text": "Mhhh... I see. [u]I'll keep at it[/u], then.",
 		"character": bodies["sophia"],
 		"voice": character_voice_sophia,
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Thanks for the encouragement. Time to LEARN!!!",
+		"text": "Thanks for the encouragement.[wave][b] Time to LEARN!!![/b][/wave]",
 		"character": bodies["sophia"],
 		"voice": character_voice_sophia,
 	},
@@ -90,13 +93,21 @@ func show_text() -> void:
 	eyes_with_a_face.texture = current_dialog["expression"]
 	character.texture = current_dialog["character"]
 	current_dialog["voice"].play(randf_range(0, sound_max_offset))
-	var text_duration = min(current_dialog["text"].length() * text_velocity, max_text_duration)
-	print(text_duration)
+	## get parsed text: the text without thw tags of bbc
+	var text_duration = min(text_dialog.get_parsed_text().length() * text_velocity, max_text_duration)
+	print("sentence duration: ", text_duration)
+	
 	## animation
-	var tween = create_tween()
-	tween.tween_property(text_dialog, "visible_ratio", 1, text_duration)
-	tween.tween_callback(func():
+	if (text_tween != null):
+		text_tween.kill()
+	next_button.disabled = true
+	back_button.disabled = true
+	text_tween = create_tween()
+	text_tween.tween_property(text_dialog, "visible_ratio", 1, text_duration)
+	text_tween.tween_callback(func():
 		current_dialog["voice"].stop()
+		next_button.disabled = false
+		back_button.disabled = false
 	)
 	slide_in()
 	
@@ -115,10 +126,12 @@ func back_text() -> void:
 	
 func slide_in() -> void:
 	var duration = 0.4
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+	if character_tween != null:
+		character_tween.kill()
+	character_tween = create_tween()
+	character_tween.set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
 	character.position.x = 250.0
 	character.modulate.a = 0.0
-	tween.set_parallel(true)
-	tween.tween_property(character, "position:x", character_position_x, duration)
-	tween.tween_property(character, "modulate:a", 1.0, duration)
+	character_tween.set_parallel(true)
+	character_tween.tween_property(character, "position:x", character_position_x, duration)
+	character_tween.tween_property(character, "modulate:a", 1.0, duration)
