@@ -2,3 +2,12 @@ res://lessons/dialogue.tscn
 res://assets/main_theme.tres
 res://lessons/challenges/test-layout.tscn
 res://lessons/dialogue.gd
+res://practices/L4.P1.populate_inventory/populate_inventory.tscn
+res://addons/gdpractice/assets/theme.tres
+res://assets/practices/practices_theme.tres
+res://practices/L4.P1.populate_inventory/populate_inventory.gd
+res://practices/L4.P2.equip_item/equip_item.tscn
+res://practices/L4.P2.equip_item/equip_item.gd
+res://lessons/slideshow.tscn
+res://lessons/slideshow_entry.gd
+res://lessons/test_slideshow_entry.tres

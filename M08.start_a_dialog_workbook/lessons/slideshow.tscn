@@ -11,8 +11,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
 shader = ExtResource("3_qyyxv")
 shader_parameter/pattern_sampler = ExtResource("4_s7o0p")
-shader_parameter/bg_color = Color(0.980392, 0.94902, 0.72549, 1)
-shader_parameter/pattern_color = Color(0.996078, 0.878431, 0.564706, 1)
+shader_parameter/bg_color = Color(0.202123, 0.404162, 0.636673, 1)
+shader_parameter/pattern_color = Color(0.788025, 0.924736, 0.879298, 1)
 shader_parameter/pattern_size = 256.0
 
 [sub_resource type="InputEventAction" id="InputEventAction_3rk3v"]
