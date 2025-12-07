@@ -1,12 +1,53 @@
-[gd_scene load_steps=11 format=3 uid="uid://chprvwfixox2y"]
+[gd_scene load_steps=20 format=3 uid="uid://chprvwfixox2y"]
 
 [ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_nggfo"]
 [ext_resource type="Script" uid="uid://c673ndsi3esbr" path="res://lessons/dialogue.gd" id="2_n1q1t"]
 [ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="3_3nfwl"]
+[ext_resource type="Script" uid="uid://djyhduxo0gt4j" path="res://lessons/dialog_entry.gd" id="3_rduj4"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_xuy0d"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_g5y1a"]
+[ext_resource type="Script" uid="uid://dojxwuobmuljh" path="res://lessons/dialog_choice.gd" id="5_xlxck"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_bayqr"]
 [ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="7_1fga6"]
+[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="7_rjbgl"]
+[ext_resource type="Texture2D" uid="uid://dchimpdsnda13" path="res://assets/emotion_happy.png" id="8_gkm7m"]
+
+[sub_resource type="Resource" id="Resource_ujubm"]
+script = ExtResource("5_xlxck")
+text = "Test"
+target_line_idx = 1
+is_quit = false
+metadata/_custom_type_script = "uid://dojxwuobmuljh"
+
+[sub_resource type="Resource" id="Resource_rjbgl"]
+script = ExtResource("3_rduj4")
+choices = Array[ExtResource("5_xlxck")]([SubResource("Resource_ujubm")])
+character = ExtResource("5_g5y1a")
+expression = ExtResource("6_bayqr")
+text = "Esto es un super test"
+metadata/_custom_type_script = "uid://djyhduxo0gt4j"
+
+[sub_resource type="Resource" id="Resource_1m3r0"]
+script = ExtResource("5_xlxck")
+text = "go back to the start"
+target_line_idx = 0
+is_quit = false
+metadata/_custom_type_script = "uid://dojxwuobmuljh"
+
+[sub_resource type="Resource" id="Resource_1f3kq"]
+script = ExtResource("5_xlxck")
+text = "Quit"
+target_line_idx = 0
+is_quit = true
+metadata/_custom_type_script = "uid://dojxwuobmuljh"
+
+[sub_resource type="Resource" id="Resource_m4u2h"]
+script = ExtResource("3_rduj4")
+choices = Array[ExtResource("5_xlxck")]([SubResource("Resource_1m3r0"), SubResource("Resource_1f3kq")])
+character = ExtResource("7_rjbgl")
+expression = ExtResource("8_gkm7m")
+text = "do you wanna go back?"
+metadata/_custom_type_script = "uid://djyhduxo0gt4j"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
 shader = ExtResource("3_3nfwl")
@@ -30,6 +71,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_nggfo")
 script = ExtResource("2_n1q1t")
+dialogue_items = Array[ExtResource("3_rduj4")]([SubResource("Resource_rjbgl"), SubResource("Resource_m4u2h")])
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_efgpg")

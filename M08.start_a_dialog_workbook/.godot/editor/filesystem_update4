@@ -11,3 +11,11 @@ res://practices/L4.P2.equip_item/equip_item.gd
 res://lessons/slideshow.tscn
 res://lessons/slideshow_entry.gd
 res://lessons/test_slideshow_entry.tres
+res://lessons/slideshow.gd
+res://practices/L5.P1.shopping_loot/shopping_loot.tscn
+res://practices/L5.P1.shopping_loot/shopping_entry.gd
+res://practices/L5.P1.shopping_loot/shopping_loot.gd
+res://practices/L6.P1.powered_inventory/powered_inventory.tscn
+res://lessons/slideshow_conversation.gd
+res://lessons/dialog_entry.gd
+res://lessons/dialog_choice.gd

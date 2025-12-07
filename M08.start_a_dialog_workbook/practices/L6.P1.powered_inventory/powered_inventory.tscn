@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://chnbkndp1f88o"]
 
-[ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="1_rra8b"]
-[ext_resource type="Texture2D" path="res://assets/bubble_pattern.png" id="2_u5mi4"]
-[ext_resource type="Script" path="res://practices/L6.P1.powered_inventory/powered_inventory.gd" id="3_tv2rc"]
-[ext_resource type="Theme" path="res://assets/practices/practices_theme.tres" id="4_lnplv"]
+[ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="1_rra8b"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_u5mi4"]
+[ext_resource type="Script" uid="uid://dx2lpn0adpucq" path="res://practices/L6.P1.powered_inventory/powered_inventory.gd" id="3_tv2rc"]
+[ext_resource type="Theme" uid="uid://qk3rjf73qo8w" path="res://assets/practices/practices_theme.tres" id="4_lnplv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p0ea8"]
 shader = ExtResource("1_rra8b")
@@ -14,6 +14,7 @@ shader_parameter/pattern_size = 256.0
 
 [node name="PoweredInventory" type="ColorRect"]
 material = SubResource("ShaderMaterial_p0ea8")
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2

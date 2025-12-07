@@ -1,16 +1,40 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://btq11c7ypo8vy"]
 
-[ext_resource type="Material" path="res://assets/practice_background_material.tres" id="1_uom0d"]
-[ext_resource type="Script" path="res://practices/L5.P1.shopping_loot/shopping_loot.gd" id="2_kdtyb"]
-[ext_resource type="Theme" path="res://assets/practices/practices_theme.tres" id="3_pf4w2"]
+[ext_resource type="Material" uid="uid://dxrtaju87p2an" path="res://assets/practice_background_material.tres" id="1_uom0d"]
+[ext_resource type="Script" uid="uid://s7jubbmokiic" path="res://practices/L5.P1.shopping_loot/shopping_loot.gd" id="2_kdtyb"]
+[ext_resource type="Script" uid="uid://c12ubbddn08oy" path="res://practices/L5.P1.shopping_loot/shopping_entry.gd" id="3_kdtyb"]
+[ext_resource type="Theme" uid="uid://qk3rjf73qo8w" path="res://assets/practices/practices_theme.tres" id="3_pf4w2"]
+
+[sub_resource type="Resource" id="Resource_pf4w2"]
+script = ExtResource("3_kdtyb")
+text = "Test"
+amount = 10
+price = 2
+metadata/_custom_type_script = "uid://c12ubbddn08oy"
+
+[sub_resource type="Resource" id="Resource_ikuku"]
+script = ExtResource("3_kdtyb")
+text = "setup"
+amount = 20
+price = 12
+metadata/_custom_type_script = "uid://c12ubbddn08oy"
+
+[sub_resource type="Resource" id="Resource_kdtyb"]
+script = ExtResource("3_kdtyb")
+text = "ulises"
+amount = 12
+price = 111
+metadata/_custom_type_script = "uid://c12ubbddn08oy"
 
 [node name="ShoppingLoot" type="ColorRect"]
 material = ExtResource("1_uom0d")
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_kdtyb")
+items_list = Array[ExtResource("3_kdtyb")]([SubResource("Resource_pf4w2"), SubResource("Resource_ikuku"), SubResource("Resource_kdtyb")])
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1

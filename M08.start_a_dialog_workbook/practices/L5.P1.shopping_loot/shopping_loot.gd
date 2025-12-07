@@ -14,6 +14,9 @@ func _ready() -> void:
 	for item in items_list:
 		var button := InventorySlotButton.new()
 		grid_container.add_child(button)
+		button.text = item.text
+		button.amount = item.amount
+		button.price = item.price
 		# Set the button's properties: text, amount, and price from the item.
 		# Warning! You will get an error here if you didn't set up the
 		# ShoppingEntry resource before.
