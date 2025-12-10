@@ -22,8 +22,6 @@ metadata/_custom_type_script = "uid://dojxwuobmuljh"
 [sub_resource type="Resource" id="Resource_rjbgl"]
 script = ExtResource("3_rduj4")
 choices = Array[ExtResource("5_xlxck")]([SubResource("Resource_ujubm")])
-character = ExtResource("5_g5y1a")
-expression = ExtResource("6_bayqr")
 text = "Esto es un super test"
 metadata/_custom_type_script = "uid://djyhduxo0gt4j"
 

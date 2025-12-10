@@ -1,3 +1,4 @@
+@icon("res://assets/dialogue_choice_icon.svg")
 class_name DialogChoice extends Resource
 
 @export var text := ""

@@ -1,3 +1,4 @@
+@icon("res://assets/dialogue_scene_icon.svg")
 extends Control
 
 ## An array of dictionaries. Each dictionary has three properties:
@@ -30,7 +31,7 @@ func show_text(current_item_index: int = 0) -> void:
 	rich_text_label.text = current_item["text"]
 	expression.texture = current_item["expression"]
 	body.texture = current_item["character"]
-	create_buttons(current_item["choices"])
+	create_buttons(current_item.choices)
 
 	# We set the initial visible ratio to the text to 0, so we can change it in the tween
 	rich_text_label.visible_ratio = 0.0
@@ -71,18 +72,19 @@ func slide_in() -> void:
 	body.modulate.a = 0
 	slide_tween.parallel().tween_property(body, "modulate:a", 1, 0.2)
 
-func create_buttons(btn_dictorionary: Dictionary) -> void:
+func create_buttons(btn_dictorionary: Array[DialogChoice]) -> void:
 	clear_btns()
-	for btn_key in btn_dictorionary:
+	for btn_item in btn_dictorionary:
 		var button = Button.new()
-		button.text = btn_key.capitalize()
-		var btn_value_idx = btn_dictorionary[btn_key]
-		if (btn_value_idx == -1):
+		button.text = btn_item.text
+		var btn_value_idx = btn_item.target_line_idx
+		if (btn_item.is_quit):
+			button.theme_type_variation = "quit_button"
 			button.pressed.connect(get_tree().quit)
 		else:	
 			button.pressed.connect(
 				func ():
-					show_text(btn_dictorionary[btn_key])
+					show_text(btn_value_idx)
 			)
 		action_buttons_v_box_container.add_child(button)
 
@@ -98,3 +100,9 @@ func set_btns_visibility(is_visible: bool):
 		var tween = create_tween()
 		for button:Button in action_buttons_v_box_container.get_children():
 			tween.tween_property(button, "modulate:a", 1.0, 0.2)
+
+func set_dialogue_items(new_dialogue_items: Array[DialogEntry]) -> void:
+	for index in new_dialogue_items.size():
+		if new_dialogue_items[index] == null:
+			new_dialogue_items[index] = DialogEntry.new()
+	dialogue_items = new_dialogue_items

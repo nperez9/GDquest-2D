@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://chnbkndp1f88o"]
+[gd_scene load_steps=16 format=3 uid="uid://chnbkndp1f88o"]
 
 [ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="1_rra8b"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_u5mi4"]
 [ext_resource type="Script" uid="uid://dx2lpn0adpucq" path="res://practices/L6.P1.powered_inventory/powered_inventory.gd" id="3_tv2rc"]
+[ext_resource type="Script" uid="uid://b335bxlluh0ki" path="res://practices/L6.P1.powered_inventory/powered_item.gd" id="4_fv7gs"]
 [ext_resource type="Theme" uid="uid://qk3rjf73qo8w" path="res://assets/practices/practices_theme.tres" id="4_lnplv"]
+[ext_resource type="Script" uid="uid://dyjwe0yplmi5u" path="res://practices/L6.P1.powered_inventory/power.gd" id="5_umkyc"]
+[ext_resource type="Texture2D" uid="uid://cmql810anba03" path="res://assets/practices/sword.svg" id="6_1ifkm"]
+[ext_resource type="Texture2D" uid="uid://fmo4awo50w86" path="res://assets/practices/book.svg" id="7_ofs68"]
+[ext_resource type="Texture2D" uid="uid://bnpc28bwgthih" path="res://assets/practices/shrimp.svg" id="8_th00i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p0ea8"]
 shader = ExtResource("1_rra8b")
@@ -11,6 +16,35 @@ shader_parameter/pattern_sampler = ExtResource("2_u5mi4")
 shader_parameter/bg_color = Color(0.537824, 0.0789613, 0.817605, 1)
 shader_parameter/pattern_color = Color(0.467561, 0.0634301, 0.715504, 1)
 shader_parameter/pattern_size = 256.0
+
+[sub_resource type="Resource" id="Resource_ihf0u"]
+script = ExtResource("5_umkyc")
+image = ExtResource("6_1ifkm")
+metadata/_custom_type_script = "uid://dyjwe0yplmi5u"
+
+[sub_resource type="Resource" id="Resource_4r7tn"]
+script = ExtResource("5_umkyc")
+image = ExtResource("7_ofs68")
+metadata/_custom_type_script = "uid://dyjwe0yplmi5u"
+
+[sub_resource type="Resource" id="Resource_k55re"]
+script = ExtResource("4_fv7gs")
+text = "test"
+price = 10
+powerups_list = Array[ExtResource("5_umkyc")]([SubResource("Resource_ihf0u"), SubResource("Resource_4r7tn")])
+metadata/_custom_type_script = "uid://b335bxlluh0ki"
+
+[sub_resource type="Resource" id="Resource_ukkbo"]
+script = ExtResource("5_umkyc")
+image = ExtResource("8_th00i")
+metadata/_custom_type_script = "uid://dyjwe0yplmi5u"
+
+[sub_resource type="Resource" id="Resource_38jym"]
+script = ExtResource("4_fv7gs")
+text = "other power"
+price = 21
+powerups_list = Array[ExtResource("5_umkyc")]([SubResource("Resource_ukkbo")])
+metadata/_custom_type_script = "uid://b335bxlluh0ki"
 
 [node name="PoweredInventory" type="ColorRect"]
 material = SubResource("ShaderMaterial_p0ea8")
@@ -20,6 +54,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_tv2rc")
+items_list = Array[ExtResource("4_fv7gs")]([SubResource("Resource_k55re"), SubResource("Resource_38jym"), SubResource("Resource_k55re")])
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1

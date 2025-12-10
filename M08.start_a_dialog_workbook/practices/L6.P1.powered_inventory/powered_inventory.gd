@@ -13,6 +13,8 @@ var tween: Tween
 
 func _ready() -> void:
 	for item in items_list:
+		if item == null:
+			continue
 		var button := InventorySlotButton.new()
 		grid_container.add_child(button)
 		# Warning! If your list has null values, you will get an error here.
@@ -24,13 +26,15 @@ func _ready() -> void:
 
 
 func display_powerups(powerups_list: Array[Power]) -> void:
+	for powerups_children in powerups_v_box_container.get_children():
+		powerups_children.queue_free()
 	# Make sure to remove previous children before adding the new ones.
 	# Once you removed all children, loop through the powerups_list array
 	for power in powerups_list:
 		# Create a TextureRect node.
-		# Assign the power's image to the TextureRect node's `texture` property.
-		# Then, add the TextureRect as a child of powerups_v_box_container.
-		pass
+		var textureRect = TextureRect.new()
+		textureRect.texture = power.image
+		powerups_v_box_container.add_child(textureRect)
 
 
 # Displays an item. Requires an item name
