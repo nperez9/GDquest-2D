@@ -3,3 +3,5 @@ res://lessons/runner.gd
 res://practices/L2.P1.asteroid_field/asteroid_field.tscn
 res://addons/gdpractice/assets/theme.tres
 res://practices/L2.P1.asteroid_field/moving_ship.gd
+res://lessons/testo_sceno.tscn
+res://lessons/block.tscn
