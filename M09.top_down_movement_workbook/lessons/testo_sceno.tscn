@@ -1,14 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2gfxo8jhw2ir"]
+[gd_scene load_steps=4 format=3 uid="uid://c2gfxo8jhw2ir"]
 
 [ext_resource type="PackedScene" uid="uid://cn6o8jp7xltwl" path="res://lessons/runner.tscn" id="1_82mrn"]
 [ext_resource type="PackedScene" uid="uid://c7456xl3vgg5l" path="res://lessons/block.tscn" id="2_ae4y5"]
+[ext_resource type="PackedScene" uid="uid://16wyy567d4x" path="res://lessons/level.tscn" id="3_eiim0"]
 
 [node name="TestoSceno" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Level" parent="." instance=ExtResource("3_eiim0")]
+z_index = -2
+metadata/_edit_lock_ = true
 
 [node name="Block" parent="." instance=ExtResource("2_ae4y5")]
-position = Vector2(360, 192)
+position = Vector2(392, 320)
+
+[node name="Block2" parent="." instance=ExtResource("2_ae4y5")]
+position = Vector2(808, -576)
+
+[node name="Block3" parent="." instance=ExtResource("2_ae4y5")]
+position = Vector2(-1352, -96)
 
 [node name="Runner" parent="." instance=ExtResource("1_82mrn")]
+position = Vector2(-8, -168)
+
+[node name="Camera2D" type="Camera2D" parent="Runner"]
+position = Vector2(0, 136)

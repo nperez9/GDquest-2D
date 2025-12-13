@@ -5,3 +5,5 @@ res://addons/gdpractice/assets/theme.tres
 res://practices/L2.P1.asteroid_field/moving_ship.gd
 res://lessons/testo_sceno.tscn
 res://lessons/block.tscn
+res://lessons/level.tscn
+res://practices/L4.P1.bumping_in_wall/bumping_in_walls.tscn
