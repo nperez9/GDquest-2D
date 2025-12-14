@@ -1,7 +1,7 @@
 ## An animated character for the running game.
 ##
 ## You can change the playing animation with the [member animation] property, and
-## change the character's viewing angle with the [member angle] property.
+## change the character's viewing angle with the [member angle] property..
 @tool
 class_name RunnerVisual extends Node2D
 
