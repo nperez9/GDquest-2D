@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://ci6udewor75ax"]
+
+[ext_resource type="Theme" uid="uid://dipl6h0ct8kow" path="res://lessons/psue_theme.tres" id="1_3tadp"]
+[ext_resource type="Shader" uid="uid://dp1hn66gsihpv" path="res://assets/blur.gdshader" id="2_ovds4"]
+[ext_resource type="Script" uid="uid://b01gc8am0p5pe" path="res://lessons/pause_menu.gd" id="2_trebl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2bsg3"]
+shader = ExtResource("2_ovds4")
+shader_parameter/blur_amount = 3.87
+shader_parameter/tint = Color(0.310547, 0.322563, 0.75, 1)
+shader_parameter/tint_strength = 0.191
+shader_parameter/saturation = 0.39
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fcqfw"]
+shader = ExtResource("2_ovds4")
+shader_parameter/blur_amount = 10.0
+shader_parameter/tint = Color(0, 0, 0, 1)
+shader_parameter/tint_strength = 0.28
+shader_parameter/saturation = 0.18
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_3tadp")
+script = ExtResource("2_trebl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_2bsg3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_fcqfw")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -180.0
+offset_right = 224.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme = ExtResource("1_3tadp")
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 4
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Resume
+"
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit
+"

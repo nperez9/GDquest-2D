@@ -1,11 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2gfxo8jhw2ir"]
+[gd_scene load_steps=9 format=3 uid="uid://c2gfxo8jhw2ir"]
 
 [ext_resource type="PackedScene" uid="uid://cn6o8jp7xltwl" path="res://lessons/runner.tscn" id="1_82mrn"]
+[ext_resource type="Script" uid="uid://bntp1dlajlu6h" path="res://lessons/game_manager.gd" id="1_hptcc"]
 [ext_resource type="PackedScene" uid="uid://c7456xl3vgg5l" path="res://lessons/block.tscn" id="2_ae4y5"]
+[ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="3_3tj5h"]
 [ext_resource type="PackedScene" uid="uid://16wyy567d4x" path="res://lessons/level.tscn" id="3_eiim0"]
+[ext_resource type="PackedScene" uid="uid://ci6udewor75ax" path="res://lessons/pause_menu.tscn" id="4_352ew"]
+[ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="6_aw0mg"]
+[ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="7_352ew"]
 
 [node name="TestoSceno" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_hptcc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CountDown" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -109.5
+offset_right = 20.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("6_aw0mg")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_352ew")
+metadata/_custom_type_script = "uid://57e8080cpukf"
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_352ew")]
+unique_name_in_owner = true
 
 [node name="Level" parent="." instance=ExtResource("3_eiim0")]
 z_index = -2
@@ -20,7 +52,13 @@ position = Vector2(808, -576)
 [node name="Block3" parent="." instance=ExtResource("2_ae4y5")]
 position = Vector2(-1352, -96)
 
+[node name="FinishLine" parent="." instance=ExtResource("3_3tj5h")]
+unique_name_in_owner = true
+position = Vector2(1344, 68)
+area_width = 256
+
 [node name="Runner" parent="." instance=ExtResource("1_82mrn")]
+unique_name_in_owner = true
 position = Vector2(-8, -168)
 
 [node name="Camera2D" type="Camera2D" parent="Runner"]

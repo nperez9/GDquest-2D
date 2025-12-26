@@ -31,6 +31,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="M09. Top Down Movement"
 
+[editor]
+
+movie_writer/movie_file="/Users/nicolas/Video/runner.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gdpractice/plugin.cfg")

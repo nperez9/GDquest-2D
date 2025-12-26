@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://fj4snl1o6pqc"]
+
+[ext_resource type="Texture2D" uid="uid://tgs14f485wph" path="res://assets/kenney-particles/smoke_04.png" id="1_ld0u8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ld0u8"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_b2r51"]
+_data = [Vector2(0, 0.520468), 0.0, 0.0, 0, 0, Vector2(1e-05, 0.538012), 0.0, 0.0, 0, 0, Vector2(0.462963, 0.997076), 0.0, 0.0, 0, 0, Vector2(1, 0.0204678), -1.20574, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_8o5s6"]
+curve = SubResource("Curve_b2r51")
+
+[sub_resource type="Gradient" id="Gradient_apljg"]
+offsets = PackedFloat32Array(0, 0.732759, 1)
+colors = PackedColorArray(0.813344, 0.365174, 0.134911, 1, 0.90625, 0.100891, 0.100891, 1, 0.294118, 0.0117647, 0.0117647, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6217b"]
+gradient = SubResource("Gradient_apljg")
+
+[sub_resource type="Curve" id="Curve_ld0u8"]
+_data = [Vector2(0, 0.0196451), 0.0, 9.4959, 0, 0, Vector2(0.346561, 1), 0.0, 0.0, 0, 0, Vector2(0.759259, 0.0701754), -1.55428, -1.55428, 0, 0, Vector2(1, 0.0087719), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_b2r51"]
+curve = SubResource("Curve_ld0u8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b2r51"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+angle_min = -180.0
+angle_max = 180.0
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 50.0
+initial_velocity_max = 70.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.2
+scale_curve = SubResource("CurveTexture_b2r51")
+color_ramp = SubResource("GradientTexture1D_6217b")
+alpha_curve = SubResource("CurveTexture_8o5s6")
+
+[node name="Particles" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ld0u8")
+amount = 30
+texture = ExtResource("1_ld0u8")
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_b2r51")
