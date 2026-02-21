@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2gfxo8jhw2ir"]
+[gd_scene load_steps=10 format=3 uid="uid://c2gfxo8jhw2ir"]
 
 [ext_resource type="PackedScene" uid="uid://cn6o8jp7xltwl" path="res://lessons/runner.tscn" id="1_82mrn"]
 [ext_resource type="Script" uid="uid://bntp1dlajlu6h" path="res://lessons/game_manager.gd" id="1_hptcc"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ci6udewor75ax" path="res://lessons/pause_menu.tscn" id="4_352ew"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="6_aw0mg"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="7_352ew"]
+[ext_resource type="PackedScene" uid="uid://dr1ro4vfhynpw" path="res://lessons/bouncer.tscn" id="8_2bsg3"]
 
 [node name="TestoSceno" type="Node2D"]
 y_sort_enabled = true
@@ -38,6 +39,8 @@ metadata/_custom_type_script = "uid://57e8080cpukf"
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_352ew")]
 unique_name_in_owner = true
+process_mode = 3
+opening_speed = 1.0
 
 [node name="Level" parent="." instance=ExtResource("3_eiim0")]
 z_index = -2
@@ -57,9 +60,13 @@ unique_name_in_owner = true
 position = Vector2(1344, 68)
 area_width = 256
 
+[node name="Bouncer" parent="." instance=ExtResource("8_2bsg3")]
+unique_name_in_owner = true
+position = Vector2(376, -64)
+
 [node name="Runner" parent="." instance=ExtResource("1_82mrn")]
 unique_name_in_owner = true
-position = Vector2(-8, -168)
+position = Vector2(-264, -64)
 
 [node name="Camera2D" type="Camera2D" parent="Runner"]
 position = Vector2(0, 136)

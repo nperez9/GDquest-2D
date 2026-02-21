@@ -2,7 +2,9 @@ extends Node2D
 
 @onready var _finish_line := %FinishLine
 @onready var _runner: Runner = %Runner
+@onready var _bouncer: CharacterBody2D = %Bouncer
 @onready var _countdown: CountDown = %CountDown
+@onready var _pause_menu: PauseMenu = %PauseMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,11 +28,15 @@ func _ready() -> void:
 	)
 	
 	_countdown.start_counting()
-	_runner.set_physics_process(false)
+	_set_characters_physics_process(false)
 	_countdown.counting_finished.connect(func(): 
-		_runner.set_physics_process(true)	
+		_set_characters_physics_process(true)
 	)
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	## Setup props pauseMenu
+	_pause_menu.menu_opened_amount = 0.0
+	_pause_menu.opening_speed = 1.0
+	
+func _set_characters_physics_process(enable: bool) -> void:
+	_runner.set_physics_process(enable)
+	_bouncer.set_physics_process(enable)

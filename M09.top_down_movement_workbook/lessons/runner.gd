@@ -75,6 +75,7 @@ func walk_to(destination_global_position: Vector2) -> void:
 		walked_to.emit()
 	)
 
+
 ## OLD match version for changing sprites
 	#match direction_discrete:
 	#Vector2.RIGHT, Vector2.LEFT:

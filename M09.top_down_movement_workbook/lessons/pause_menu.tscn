@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci6udewor75ax"]
+[gd_scene load_steps=5 format=3 uid="uid://ci6udewor75ax"]
 
 [ext_resource type="Theme" uid="uid://dipl6h0ct8kow" path="res://lessons/psue_theme.tres" id="1_3tadp"]
 [ext_resource type="Shader" uid="uid://dp1hn66gsihpv" path="res://assets/blur.gdshader" id="2_ovds4"]
@@ -6,17 +6,10 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2bsg3"]
 shader = ExtResource("2_ovds4")
-shader_parameter/blur_amount = 3.87
+shader_parameter/blur_amount = 3.99899
 shader_parameter/tint = Color(0.310547, 0.322563, 0.75, 1)
-shader_parameter/tint_strength = 0.191
-shader_parameter/saturation = 0.39
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fcqfw"]
-shader = ExtResource("2_ovds4")
-shader_parameter/blur_amount = 10.0
-shader_parameter/tint = Color(0, 0, 0, 1)
-shader_parameter/tint_strength = 0.28
-shader_parameter/saturation = 0.18
+shader_parameter/tint_strength = 0.199949
+shader_parameter/saturation = 0.399899
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -29,6 +22,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_3tadp")
 script = ExtResource("2_trebl")
+opening_speed = 0.2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 unique_name_in_owner = true
@@ -42,7 +36,6 @@ grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 unique_name_in_owner = true
-material = SubResource("ShaderMaterial_fcqfw")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

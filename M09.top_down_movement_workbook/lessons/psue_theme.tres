@@ -1,10 +1,13 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dipl6h0ct8kow"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dipl6h0ct8kow"]
 
 [ext_resource type="FontFile" uid="uid://fgmvmer0x70h" path="res://assets/fonts/rubik/Rubik-Black.ttf" id="1_mxmys"]
 [ext_resource type="StyleBox" uid="uid://dpo8k0vqg7u0v" path="res://lessons/button-default.tres" id="1_nnh3a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnh3a"]
 bg_color = Color(0.679688, 0.21904, 0.21904, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mxmys"]
+bg_color = Color(0, 0, 0, 0.458824)
 
 [resource]
 Button/font_sizes/font_size = 38
@@ -17,4 +20,5 @@ Button/styles/pressed = ExtResource("1_nnh3a")
 Label/font_sizes/font_size = 48
 Label/fonts/font = ExtResource("1_mxmys")
 Label/styles/normal = SubResource("StyleBoxFlat_nnh3a")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_mxmys")
 VBoxContainer/constants/separation = 40
