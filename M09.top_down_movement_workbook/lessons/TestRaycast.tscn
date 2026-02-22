@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp7wa3214llau"]
+
+[ext_resource type="PackedScene" uid="uid://c7456xl3vgg5l" path="res://lessons/block.tscn" id="1_7j3rs"]
+[ext_resource type="Script" uid="uid://c015lhu4m128c" path="res://lessons/ray_cast_2d.gd" id="2_46j1r"]
+
+[node name="TestRaycast" type="Node2D"]
+
+[node name="Block" parent="." instance=ExtResource("1_7j3rs")]
+position = Vector2(320, 160)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(160, 160)
+target_position = Vector2(0, 96)
+script = ExtResource("2_46j1r")

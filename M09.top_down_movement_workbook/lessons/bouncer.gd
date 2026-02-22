@@ -25,12 +25,7 @@ func _physics_process(delta: float) -> void:
 		tween.set_trans(Tween.TRANS_QUAD)
 		tween.tween_property(self, "actual_max_speed", max_speed, ramp_up_duration)
 
-	var target_pos: Vector2
-	if !_player:
-		## For testing mostly
-		target_pos = get_global_mouse_position()
-	else:
-		target_pos = _player.global_position
+	var target_pos := get_global_player_position()
 		
 	var direction := global_position.direction_to(target_pos)
 	
@@ -69,3 +64,10 @@ func on_body_entered(body: Node2D) -> void:
 	if body is Runner:
 		print_debug("Deathto")
 		get_tree().reload_current_scene.call_deferred()
+		
+## Returns the player's global position if the Runner node exists in the scene.
+## Falls back to the mouse position otherwise (useful for testing without a player).
+func get_global_player_position() -> Vector2:
+	if _player:
+		return _player.global_position
+	return get_global_mouse_position()
