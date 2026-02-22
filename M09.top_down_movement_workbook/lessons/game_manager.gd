@@ -14,6 +14,8 @@ func _ready() -> void:
 		
 		var runner := body as Runner
 		## stop physics update
+		_bouncer.set_physics_process(false)
+		_bouncer.stop_bouncer()
 		runner.set_physics_process(false)
 		## force middle
 		var destinitaion_pos: Vector2 = _finish_line.global_position + Vector2(0, 64)
@@ -29,8 +31,14 @@ func _ready() -> void:
 	
 	_countdown.start_counting()
 	_set_characters_physics_process(false)
-	_countdown.counting_finished.connect(func(): 
+	_bouncer.set_physics_process(false)
+	_countdown.counting_finished.connect(func():
 		_set_characters_physics_process(true)
+		_bouncer.modulate = Color.GRAY
+		get_tree().create_timer(3.0).timeout.connect(func():
+			_bouncer.modulate = Color.WHITE
+			_bouncer.set_physics_process(true)
+		)
 	)
 	
 	## Setup props pauseMenu
@@ -39,4 +47,3 @@ func _ready() -> void:
 	
 func _set_characters_physics_process(enable: bool) -> void:
 	_runner.set_physics_process(enable)
-	_bouncer.set_physics_process(enable)
