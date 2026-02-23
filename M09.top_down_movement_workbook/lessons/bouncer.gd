@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var distance_to_desscelariton := 150.0
 @export var ramp_up_duration := 2.0
 @export var avoidance_strength := 21000.0
+@export var max_avoidance_force := 15000.0
 
 var _has_ramped_up := false
 var actual_max_speed := 0.0
@@ -77,16 +78,46 @@ func get_global_player_position() -> Vector2:
 		return _player.global_position
 	return get_global_mouse_position()
 
-## Calculate the force for evading objecs
+## Calculate the force for evading objects using free-ray steering
 func calculate_avoidance_force() -> Vector2:
-	var avoidance_force := Vector2.ZERO
-	
+	var free_direction := Vector2.ZERO
+	var wall_normal := Vector2.ZERO
+	var blocked_count := 0
+	var total_count := 0
+
 	for raycast: RayCast2D in _raycast.get_children():
-		if raycast.is_colliding():
-			var collision_position := raycast.get_collision_point()
-			## que te direction to the opposite direction
-			var direction_away_from_obstacle := collision_position.direction_to(raycast.global_position)
-			var force := direction_away_from_obstacle * avoidance_strength
-			avoidance_force += force
-	
-	return avoidance_force
+		total_count += 1
+		if raycast.is_colliding() and not raycast.get_collider() is Runner:
+			blocked_count += 1
+			wall_normal += raycast.get_collision_normal()
+		else:
+			var ray_dir := Vector2.from_angle(raycast.global_rotation)
+			var forward_dir := Vector2.from_angle(_raycast.global_rotation)
+			var alignment := (ray_dir.dot(forward_dir) + 1.0) * 0.5
+			var weight := 0.5 + alignment * 0.5
+			free_direction += ray_dir * weight
+
+	if blocked_count == 0:
+		return Vector2.ZERO
+
+	var block_ratio := float(blocked_count) / float(total_count)
+
+	# Fallback: if free_direction is near zero (head-on wall hit), slide along the wall
+	if free_direction.length() < 0.1:
+		wall_normal = wall_normal.normalized()
+		var wall_tangent := Vector2(-wall_normal.y, wall_normal.x)
+		# Pick the tangent direction that leads toward the player
+		var to_player := global_position.direction_to(get_global_player_position())
+		if wall_tangent.dot(to_player) < 0.0:
+			wall_tangent = -wall_tangent
+		return (wall_tangent * avoidance_strength).limit_length(max_avoidance_force)
+
+	# Normal case: steer toward free space
+	var avoidance_force := free_direction.normalized() * avoidance_strength * block_ratio
+
+	# Blend with current velocity direction to avoid wild turns
+	if velocity.length() > 10.0:
+		var move_dir := velocity.normalized()
+		avoidance_force = avoidance_force.lerp(move_dir * avoidance_force.length(), 0.3)
+
+	return avoidance_force.limit_length(max_avoidance_force)

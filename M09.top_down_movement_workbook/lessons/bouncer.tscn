@@ -69,7 +69,6 @@ debug_color = Color(0.101997, 0.788257, 0.900391, 0.117647)
 
 [node name="Hitbox" type="Area2D" parent="CollisionShape2D"]
 unique_name_in_owner = true
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Hitbox"]
 shape = SubResource("CircleShape2D_o17vw")
@@ -84,6 +83,18 @@ target_position = Vector2(48, 46)
 
 [node name="RayCast2D" type="RayCast2D" parent="Raycast"]
 target_position = Vector2(-48, 46)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Raycast"]
+target_position = Vector2(-12, 46)
+
+[node name="RayCast2D4" type="RayCast2D" parent="Raycast"]
+target_position = Vector2(12, 46)
+
+[node name="RayCast2D5" type="RayCast2D" parent="Raycast"]
+target_position = Vector2(-46, 12)
+
+[node name="RayCast2D6" type="RayCast2D" parent="Raycast"]
+target_position = Vector2(46, 12)
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
