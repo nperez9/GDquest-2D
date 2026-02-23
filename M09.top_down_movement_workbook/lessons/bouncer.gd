@@ -5,6 +5,7 @@ extends CharacterBody2D
 ## In PIXELS
 @export var distance_to_desscelariton := 150.0
 @export var ramp_up_duration := 2.0
+@export var avoidance_strength := 21000.0
 
 var _has_ramped_up := false
 var actual_max_speed := 0.0
@@ -13,6 +14,7 @@ var actual_max_speed := 0.0
 @onready var _runner_visual := %RunnerVisual
 @onready var _particles := %GPUParticles2D
 @onready var _hitbox:= %Hitbox
+@onready var _raycast:= %Raycast
 
 func _ready() -> void:
 	_hitbox.body_entered.connect(on_body_entered)
@@ -36,13 +38,16 @@ func _physics_process(delta: float) -> void:
 		speed = actual_max_speed * distance / distance_to_desscelariton
 		
 	var desired_velocity := direction * speed
+	desired_velocity += calculate_avoidance_force() * delta
 	velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 	move_and_slide()
 	
 	# print_debug(velocity.length(), "  ",speed, " distance", distance)
 	
-	if velocity.length() > 200.0 || actual_max_speed != max_speed:
-		_runner_visual.angle = rotate_toward(_runner_visual.angle, direction.orthogonal().angle(), 8.0 * delta)
+	if velocity.length() > 190.0 || actual_max_speed != max_speed:
+		var rotation_angle = rotate_toward(_runner_visual.angle, direction.orthogonal().angle(), 8.0 * delta)
+		_runner_visual.angle = rotation_angle
+		_raycast.rotation = rotation_angle
 		
 		var current_speed_percent := velocity.length() / actual_max_speed
 		_runner_visual.animation_name = (
@@ -71,3 +76,17 @@ func get_global_player_position() -> Vector2:
 	if _player:
 		return _player.global_position
 	return get_global_mouse_position()
+
+## Calculate the force for evading objecs
+func calculate_avoidance_force() -> Vector2:
+	var avoidance_force := Vector2.ZERO
+	
+	for raycast: RayCast2D in _raycast.get_children():
+		if raycast.is_colliding():
+			var collision_position := raycast.get_collision_point()
+			## que te direction to the opposite direction
+			var direction_away_from_obstacle := collision_position.direction_to(raycast.global_position)
+			var force := direction_away_from_obstacle * avoidance_strength
+			avoidance_force += force
+	
+	return avoidance_force

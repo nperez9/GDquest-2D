@@ -55,6 +55,7 @@ texture = ExtResource("2_41ggd")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, -35)
 amount = 10
 texture = ExtResource("3_1wh80")
@@ -68,10 +69,21 @@ debug_color = Color(0.101997, 0.788257, 0.900391, 0.117647)
 
 [node name="Hitbox" type="Area2D" parent="CollisionShape2D"]
 unique_name_in_owner = true
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Hitbox"]
 shape = SubResource("CircleShape2D_o17vw")
 debug_color = Color(0.456641, 0, 0.7, 0.42)
+
+[node name="Raycast" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -22)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Raycast"]
+target_position = Vector2(48, 46)
+
+[node name="RayCast2D" type="RayCast2D" parent="Raycast"]
+target_position = Vector2(-48, 46)
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true

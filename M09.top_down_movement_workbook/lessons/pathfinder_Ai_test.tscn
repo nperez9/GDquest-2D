@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://v3os60y617kb"]
+
+[ext_resource type="PackedScene" uid="uid://dr1ro4vfhynpw" path="res://lessons/bouncer.tscn" id="1_b1jsp"]
+[ext_resource type="PackedScene" uid="uid://c7456xl3vgg5l" path="res://lessons/block.tscn" id="2_aks4i"]
+
+[node name="PathfinderAiTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Block" parent="." instance=ExtResource("2_aks4i")]
+position = Vector2(416, 64)
+
+[node name="Block2" parent="." instance=ExtResource("2_aks4i")]
+position = Vector2(416, -256)
+
+[node name="Block3" parent="." instance=ExtResource("2_aks4i")]
+position = Vector2(672, -96)
+
+[node name="Bouncer" parent="." instance=ExtResource("1_b1jsp")]
