@@ -47,9 +47,6 @@ opening_speed = 1.0
 z_index = -2
 metadata/_edit_lock_ = true
 
-[node name="Block" parent="." instance=ExtResource("2_ae4y5")]
-position = Vector2(384, 312)
-
 [node name="Block2" parent="." instance=ExtResource("2_ae4y5")]
 position = Vector2(794, -544)
 

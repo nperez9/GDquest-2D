@@ -82,7 +82,7 @@ func get_global_player_position() -> Vector2:
 func calculate_avoidance_force() -> Vector2:
 	var free_direction := Vector2.ZERO
 	var wall_normal := Vector2.ZERO
-	var blocked_count := 0
+	var blocked_count := 0.0
 	var total_count := 0
 
 	for raycast: RayCast2D in _raycast.get_children():
@@ -97,7 +97,7 @@ func calculate_avoidance_force() -> Vector2:
 			var weight := 0.5 + alignment * 0.5
 			free_direction += ray_dir * weight
 
-	if blocked_count == 0:
+	if blocked_count == 0.0:
 		return Vector2.ZERO
 
 	var block_ratio := float(blocked_count) / float(total_count)
