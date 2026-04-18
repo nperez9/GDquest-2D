@@ -3,6 +3,7 @@ class_name Runner extends CharacterBody2D
 @export var max_speed := 600.0
 @export var acceleration := 1200.0
 @export var deacceleration := 1080.0
+var start_emitting_particles_velocity := max_speed * 0.9
 
 @onready var _runner_visual := %RunnerVisualRed
 @onready var _particles := %GPUParticles2D
@@ -32,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(desired_velocity, delta * acceleration)
 		## no use of this line, but other way to get it
 		var current_speed_percent := velocity.length() / max_speed
-		if velocity.length() > max_speed * 0.9:
+		if velocity.length() > start_emitting_particles_velocity:
 			_particles.emitting = true
 			_runner_visual.set_animation_name(RunnerVisual.Animations.RUN)
 		else:
