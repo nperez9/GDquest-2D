@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://iwjfwxjd2xno"]
+
+[ext_resource type="Script" uid="uid://c8u60a0a3mf6x" path="res://weapons/bullet.gd" id="1_dgmvy"]
+[ext_resource type="Texture2D" uid="uid://dxe2pniv6kdn4" path="res://weapons/bullets/fire_trail.png" id="1_h0qeb"]
+[ext_resource type="Texture2D" uid="uid://bgn8fvhkjniwn" path="res://weapons/bullets/fire.png" id="2_dgmvy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swu4h"]
+radius = 12.0
+height = 44.0
+
+[node name="Bullet_Test" type="Node2D"]
+
+[node name="Bullet" type="Area2D" parent="."]
+script = ExtResource("1_dgmvy")
+
+[node name="FireTrail" type="Sprite2D" parent="Bullet"]
+position = Vector2(-32, 0)
+texture = ExtResource("1_h0qeb")
+
+[node name="Fire" type="Sprite2D" parent="Bullet"]
+texture = ExtResource("2_dgmvy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_swu4h")
