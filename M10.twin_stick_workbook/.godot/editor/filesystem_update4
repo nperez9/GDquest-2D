@@ -1,11 +1,15 @@
 res://default_env.tres
 res://common/shadow.tscn
-res://addons/gdpractice/assets/theme.tres
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
 res://levels/rooms/room_a.tscn
 res://levels/test/player_test.tscn
 res://weapons/bullet_test.tscn
 res://player/player.tscn
-res://weapons/bullet.gd
+res://weapons/weapon.tscn
+res://weapons/bullet.tscn
+res://weapons/test/weapon_test.tscn
+res://addons/gdpractice/assets/theme.tres
 res://player/player.gd
+res://weapons/weapon.gd
+res://player/hands_handler.gd

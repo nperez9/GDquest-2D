@@ -27,8 +27,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, delta * DEACCELERATION)
 		
-	if (Input.is_action_pressed("fire") && can_fire):
-		shoot()
+	##if (Input.is_action_pressed("fire") && can_fire):
+		##shoot()
 
 		
 	move_and_slide()
