@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="M10. Path of Sorcerers: 2D Fundamentals (Workbook)"
+run/main_scene="uid://mwb7d2nyfrrt"
 config/features=PackedStringArray("4.4")
 config/icon="res://icon.png"
 

@@ -23,8 +23,10 @@ func set_direction(dir: Vector2) -> void:
 	# 2. Apply rotation to the base direction and normalize
 	direction = dir.rotated(random_rad).normalized()
 	rotation = direction.angle()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	
+func _ready() -> void:
+	body_entered.connect(bullet_collide)
+	
 func _process(delta: float) -> void:
 	var step = direction * _speed * delta
 	global_position += step
@@ -33,6 +35,11 @@ func _process(delta: float) -> void:
 	traveled_distance += step.length()
 	
 	if traveled_distance >= _max_range:
+		_destroy()
+		
+func bullet_collide(body) -> void:
+	if body is Mob:
+		body.health = body.health - 1
 		_destroy()
 	
 func _destroy() -> void:

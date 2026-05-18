@@ -20,3 +20,7 @@ func _process(delta: float) -> void:
 	rotation = aim_direction.angle()
 	%Weapon.set_direction(aim_direction)
 	
+	z_index = 3
+	if aim_direction.y < 0.0:
+		z_index = 1
+	

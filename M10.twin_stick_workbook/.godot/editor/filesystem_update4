@@ -13,3 +13,7 @@ res://addons/gdpractice/assets/theme.tres
 res://player/player.gd
 res://weapons/weapon.gd
 res://player/hands_handler.gd
+res://mobs/sword_enemy.tscn
+res://mobs/sword_enemy.gd
+res://mobs/mob.gd
+res://weapons/bullet.gd

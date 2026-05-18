@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://mwb7d2nyfrrt"]
+[gd_scene load_steps=4 format=3 uid="uid://mwb7d2nyfrrt"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_lhft8"]
 [ext_resource type="PackedScene" uid="uid://bvumlqm6ud1fa" path="res://player/player.tscn" id="2_b14jm"]
+[ext_resource type="PackedScene" uid="uid://pqi3lgnlitel" path="res://mobs/sword_enemy.tscn" id="2_swvfj"]
 
 [node name="PlayerTest" type="Node2D"]
 
 [node name="RoomA" parent="." instance=ExtResource("1_lhft8")]
+
+[node name="SwordEnemy" parent="." instance=ExtResource("2_swvfj")]
+position = Vector2(1013, 233)
 
 [node name="Player" parent="." instance=ExtResource("2_b14jm")]
 position = Vector2(704, 640)
