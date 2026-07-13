@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvumlqm6ud1fa"]
+[gd_scene load_steps=14 format=3 uid="uid://bvumlqm6ud1fa"]
 
 [ext_resource type="Script" uid="uid://ig88xdq0qrk8" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://5ays6kuo0xio" path="res://common/shadow.tscn" id="1_rkbax"]
@@ -7,9 +7,27 @@
 [ext_resource type="Script" uid="uid://ii2ey3ccditf" path="res://player/hands_handler.gd" id="5_g6k8r"]
 [ext_resource type="Texture2D" uid="uid://dekkcmj408pvt" path="res://player/hand_fire.png" id="5_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://dkhntnns8apgw" path="res://weapons/weapon.tscn" id="7_boad6"]
+[ext_resource type="Texture2D" uid="uid://n26w4ph7i71w" path="res://ui/bars/health_point_bg.png" id="8_rgyib"]
+[ext_resource type="Texture2D" uid="uid://206pnoc2labm" path="res://ui/bars/health_point.png" id="9_hg6s5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
 radius = 24.0
+
+[sub_resource type="Theme" id="Theme_8t03j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg6s5"]
+texture = ExtResource("8_rgyib")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8t03j"]
+texture = ExtResource("9_hg6s5")
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -24,16 +42,22 @@ texture = ExtResource("2_g1dw6")
 script = ExtResource("4_yw30f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, 24)
 shape = SubResource("CircleShape2D_rkbax")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="InvulnerabilityTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
 
 [node name="FireRate" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.01
 
 [node name="WeaponPivot" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("5_g6k8r")
 
 [node name="WeaponMarker" type="Marker2D" parent="WeaponPivot"]
@@ -50,3 +74,26 @@ flip_v = true
 
 [node name="Weapon" parent="WeaponPivot/WeaponMarker" instance=ExtResource("7_boad6")]
 unique_name_in_owner = true
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -88.0
+offset_right = 68.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_8t03j")
+theme_override_styles/background = SubResource("StyleBoxTexture_hg6s5")
+theme_override_styles/fill = SubResource("StyleBoxTexture_8t03j")
+max_value = 10.0
+step = 1.0
+value = 5.0
+show_percentage = false

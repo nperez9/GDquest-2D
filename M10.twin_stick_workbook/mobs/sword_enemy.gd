@@ -11,10 +11,12 @@ var active_sprite: Texture2D = preload("res://mobs/sword_active.png")
 var _player: Player = null
 @onready var detector: Area2D = %Detector
 @onready var sprite_2d: Sprite2D = %Sprite2D
+@onready var damage_dealer: Area2D = %DamageCollision
 
 func _ready() -> void:
 	detector.body_entered.connect(on_body_entered)
 	detector.body_exited.connect(on_body_exited)
+	damage_dealer.body_entered.connect(on_damage_body_entered)
 
 func _physics_process(delta: float) -> void:
 	if (_player == null):
@@ -37,3 +39,6 @@ func on_body_exited(body) -> void:
 		_player = null
 		sprite_2d.texture = idle_sprite
 		
+func on_damage_body_entered(body) -> void:
+	if body is Player:
+		body.take_damage(damage)

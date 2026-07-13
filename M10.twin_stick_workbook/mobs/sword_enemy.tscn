@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://pqi3lgnlitel"]
+[gd_scene load_steps=6 format=3 uid="uid://pqi3lgnlitel"]
 
 [ext_resource type="Script" uid="uid://dvey7epavu04q" path="res://mobs/sword_enemy.gd" id="1_a1pan"]
 [ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="1_lqjao"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1pan"]
-radius = 16.0
-height = 96.0
+radius = 15.0
+height = 90.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lqjao"]
 radius = 448.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qfyra"]
+radius = 16.0
+height = 92.0
 
 [node name="SwordEnemy" type="CharacterBody2D"]
 motion_mode = 1
@@ -29,3 +33,11 @@ unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
 shape = SubResource("CircleShape2D_lqjao")
+
+[node name="DamageCollision" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageCollision"]
+position = Vector2(16, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qfyra")

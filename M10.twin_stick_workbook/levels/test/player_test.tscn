@@ -8,8 +8,14 @@
 
 [node name="RoomA" parent="." instance=ExtResource("1_lhft8")]
 
+[node name="SwordEnemy2" parent="." instance=ExtResource("2_swvfj")]
+position = Vector2(1245, 1256)
+
 [node name="SwordEnemy" parent="." instance=ExtResource("2_swvfj")]
 position = Vector2(1013, 233)
+
+[node name="SwordEnemy3" parent="." instance=ExtResource("2_swvfj")]
+position = Vector2(-232, 1194)
 
 [node name="Player" parent="." instance=ExtResource("2_b14jm")]
 position = Vector2(704, 640)

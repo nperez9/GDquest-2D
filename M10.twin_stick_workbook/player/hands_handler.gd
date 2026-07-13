@@ -1,3 +1,5 @@
+## Handles rotation, and weapon movement
+# DO not handle fire
 class_name HandsHandler extends Node2D
 
 var is_using_gamepad := false

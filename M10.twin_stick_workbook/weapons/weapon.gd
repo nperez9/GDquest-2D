@@ -1,3 +1,4 @@
+## Handles fire
 @tool
 extends Node2D
 
@@ -13,7 +14,7 @@ var _fire_direction = Vector2.ZERO
 
 func set_direction(dir: Vector2) -> void:
 	_fire_direction = dir
-
+	
 func _physics_process(_delta: float) -> void:
 	# Apparantly this generates a bug when were using a fire
 	if Engine.is_editor_hint():

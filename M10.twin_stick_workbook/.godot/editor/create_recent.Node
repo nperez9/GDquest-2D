@@ -1,8 +1,12 @@
+Timer
 CollisionShape2D
 Area2D
+ProgressBar
+CanvasLayer
+TextureProgressBar
+Control
 Sprite2D
 CharacterBody2D
 Marker2D
 Node2D
 Camera2D
-Timer

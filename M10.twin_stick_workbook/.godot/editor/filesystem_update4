@@ -9,11 +9,4 @@ res://player/player.tscn
 res://weapons/weapon.tscn
 res://weapons/bullet.tscn
 res://weapons/test/weapon_test.tscn
-res://addons/gdpractice/assets/theme.tres
-res://player/player.gd
-res://weapons/weapon.gd
-res://player/hands_handler.gd
 res://mobs/sword_enemy.tscn
-res://mobs/sword_enemy.gd
-res://mobs/mob.gd
-res://weapons/bullet.gd

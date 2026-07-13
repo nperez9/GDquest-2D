@@ -1,6 +1,7 @@
 class_name Mob extends CharacterBody2D
 
 @export var health := 3: set = set_health
+@export var damage := 2
 
 func set_health(value: int) -> void:
 	health = value
