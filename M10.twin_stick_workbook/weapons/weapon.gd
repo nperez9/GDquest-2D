@@ -34,7 +34,12 @@ func shoot() -> void:
 	bullet.set_max_range(max_range)
 	bullet.set_speed(max_bullet_speed)
 	bullet.set_spread(spread_angle)
-	bullet.set_direction(_fire_direction.normalized())	
+	
+	## PRevents no direction fire
+	if _fire_direction == Vector2.ZERO:
+		bullet.set_direction(Vector2.RIGHT.rotated(global_rotation))
+	else:
+		bullet.set_direction(_fire_direction.normalized())	
 	
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings = PackedStringArray()

@@ -43,16 +43,6 @@ func _physics_process(delta: float) -> void:
 	##if (Input.is_action_pressed("fire") && can_fire):
 		##shoot()
 	move_and_slide()
-
-## Fires a shoot - NOT USED
-func shoot():
-	var _bullet: BaseBullet = bullet.instantiate()
-	get_tree().current_scene.add_child(_bullet)
-	_bullet.global_position = global_position
-	print(current_direction)
-	_bullet.set_direction(current_direction)
-	fire_rate.start()
-	can_fire = false
 	
 func _modify_health(new_health: int) -> void:
 	_health = new_health
