@@ -14,12 +14,16 @@ func _ready() -> void:
 			item.use(body)
 			pickup()
 	)
+	_audio_stream2d.finished.connect(func () -> void:
+		queue_free()
+	)
 
 ## Add some magic on the deat
 func pickup() -> void:
 	## TODO: this is not working, wait for sound to play to queue free
 	_audio_stream2d.play()
-	queue_free()	
+	_sprite2d.visible = false
+	monitoring = false
 
 func set_item(new_item: Item) -> void:
 	item = new_item

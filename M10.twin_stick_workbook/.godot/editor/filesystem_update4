@@ -18,3 +18,4 @@ res://weapons/test/weapon_test.tscn
 res://mobs/sword_enemy.tscn
 res://mobs/mob.gd
 res://levels/rooms/room.gd
+res://addons/gdpractice/assets/theme.tres
