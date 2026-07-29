@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://w71yqwgucrij"]
+
+[ext_resource type="Script" uid="uid://f0336ulnrfme" path="res://pickups/item/pickup.gd" id="1_h8kdj"]
+[ext_resource type="Resource" uid="uid://b4v62jj54kqrk" path="res://pickups/item/resources/health_item.tres" id="2_exk5k"]
+[ext_resource type="Texture2D" uid="uid://bafpwix362m4w" path="res://pickups/pickup_heart_pink.png" id="3_mip86"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hysd4"]
+radius = 24.0
+
+[node name="Pickup" type="Area2D"]
+script = ExtResource("1_h8kdj")
+item = ExtResource("2_exk5k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_mip86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hysd4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true

@@ -9,6 +9,7 @@ func set_health(value: int) -> void:
 		die()
 
 func die() -> void:
+	## TODO: add more juiciness
 	queue_free()
 
 func _ready():

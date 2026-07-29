@@ -83,3 +83,5 @@ func die() -> void:
 	toggle_player_control(false)
 	print("shinde")
 	
+func heal(heal_amount: int) -> void:
+	_modify_health(clampi(heal_amount + _health, 0, max_health)) 

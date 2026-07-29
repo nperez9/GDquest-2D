@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HealthItem" load_steps=4 format=3 uid="uid://b4v62jj54kqrk"]
+
+[ext_resource type="Script" uid="uid://bsnxxogxvnmqb" path="res://pickups/item/health_item.gd" id="1_frsvl"]
+[ext_resource type="AudioStream" uid="uid://c2woejhi871h1" path="res://pickups/pickup.wav" id="2_6dgi2"]
+[ext_resource type="Texture2D" uid="uid://bmxcojfothkaq" path="res://pickups/pickup_heart_teal.png" id="3_0t85a"]
+
+[resource]
+script = ExtResource("1_frsvl")
+sprite = ExtResource("3_0t85a")
+sound = ExtResource("2_6dgi2")
+metadata/_custom_type_script = "uid://bsnxxogxvnmqb"
