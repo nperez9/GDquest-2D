@@ -15,7 +15,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if is_using_gamepad:
-		aim_direction = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+		aim_direction = Input.get_vector("aim-left", "aim-right", "aim-up", "aim-down")
 	else:
 		var mouse_pos = get_global_mouse_position()
 		aim_direction = global_position.direction_to(mouse_pos)

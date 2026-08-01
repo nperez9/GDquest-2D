@@ -21,3 +21,6 @@ res://levels/rooms/room.gd
 res://addons/gdpractice/assets/theme.tres
 res://pickups/item/resources/health_full_item.tres
 res://weapons/weapon.gd
+res://player/hands_handler.gd
+res://pickups/chest/chest.tscn
+res://pickups/chest/chest.gd

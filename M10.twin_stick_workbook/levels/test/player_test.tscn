@@ -1,32 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://mwb7d2nyfrrt"]
+[gd_scene load_steps=9 format=3 uid="uid://mwb7d2nyfrrt"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_lhft8"]
 [ext_resource type="PackedScene" uid="uid://bvumlqm6ud1fa" path="res://player/player.tscn" id="2_b14jm"]
 [ext_resource type="PackedScene" uid="uid://pqi3lgnlitel" path="res://mobs/sword_enemy.tscn" id="2_swvfj"]
+[ext_resource type="Script" uid="uid://bmn6x0325rf66" path="res://pickups/item/item.gd" id="4_4nod0"]
 [ext_resource type="PackedScene" uid="uid://w71yqwgucrij" path="res://pickups/item/pickup.tscn" id="4_swvfj"]
 [ext_resource type="Resource" uid="uid://b4v62jj54kqrk" path="res://pickups/item/resources/health_item.tres" id="5_dhv07"]
 [ext_resource type="Resource" uid="uid://ddxlhdk5j30a" path="res://pickups/item/resources/health_full_item.tres" id="6_88nnv"]
+[ext_resource type="PackedScene" uid="uid://bhaviey4xgcyp" path="res://pickups/chest/chest.tscn" id="8_a0kxm"]
 
 [node name="PlayerTest" type="Node2D"]
 
 [node name="RoomA" parent="." instance=ExtResource("1_lhft8")]
 
-[node name="SwordEnemy2" parent="." instance=ExtResource("2_swvfj")]
+[node name="SwordEnemy2" parent="RoomA" instance=ExtResource("2_swvfj")]
 position = Vector2(1245, 1256)
 
-[node name="SwordEnemy" parent="." instance=ExtResource("2_swvfj")]
+[node name="SwordEnemy" parent="RoomA" instance=ExtResource("2_swvfj")]
 position = Vector2(1013, 233)
 
-[node name="SwordEnemy3" parent="." instance=ExtResource("2_swvfj")]
+[node name="SwordEnemy3" parent="RoomA" instance=ExtResource("2_swvfj")]
 position = Vector2(-232, 1194)
 
-[node name="Player" parent="." instance=ExtResource("2_b14jm")]
-position = Vector2(704, 640)
+[node name="Chest" parent="RoomA" instance=ExtResource("8_a0kxm")]
+position = Vector2(496, 856)
+possible_items = Array[ExtResource("4_4nod0")]([ExtResource("6_88nnv"), ExtResource("5_dhv07")])
 
-[node name="Pickup" parent="." instance=ExtResource("4_swvfj")]
+[node name="Pickup" parent="RoomA" instance=ExtResource("4_swvfj")]
 position = Vector2(434, 468)
 item = ExtResource("5_dhv07")
 
-[node name="Pickup2" parent="." instance=ExtResource("4_swvfj")]
+[node name="Pickup2" parent="RoomA" instance=ExtResource("4_swvfj")]
 position = Vector2(288, 544)
 item = ExtResource("6_88nnv")
+
+[node name="Player" parent="." instance=ExtResource("2_b14jm")]
+position = Vector2(704, 640)
