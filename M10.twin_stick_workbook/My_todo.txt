@@ -1,0 +1,2 @@
+[] -> Fix collision with invisible walls
+[] -> hide the invisiblewall tilemap collision

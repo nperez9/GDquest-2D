@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://w71yqwgucrij"]
+[gd_scene load_steps=8 format=3 uid="uid://w71yqwgucrij"]
 
 [ext_resource type="Script" uid="uid://f0336ulnrfme" path="res://pickups/item/pickup.gd" id="1_h8kdj"]
 [ext_resource type="Script" uid="uid://bsnxxogxvnmqb" path="res://pickups/item/health_item.gd" id="2_i7en8"]
-[ext_resource type="Texture2D" uid="uid://bafpwix362m4w" path="res://pickups/pickup_heart_pink.png" id="3_mip86"]
 [ext_resource type="AudioStream" uid="uid://c2woejhi871h1" path="res://pickups/pickup.wav" id="3_om3oa"]
 [ext_resource type="Texture2D" uid="uid://ciw5x0nryxfqi" path="res://pickups/pickup_heart_darkpink.png" id="4_o6spt"]
 [ext_resource type="Texture2D" uid="uid://bnuxefkl10pkv" path="res://common/shadow_circle.png" id="5_om3oa"]
@@ -30,10 +29,11 @@ texture = ExtResource("5_om3oa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-texture = ExtResource("3_mip86")
+texture = ExtResource("4_o6spt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hysd4")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+stream = ExtResource("3_om3oa")

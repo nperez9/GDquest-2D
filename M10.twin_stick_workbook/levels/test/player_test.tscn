@@ -1,38 +1,73 @@
-[gd_scene load_steps=9 format=3 uid="uid://mwb7d2nyfrrt"]
+[gd_scene load_steps=14 format=4 uid="uid://mwb7d2nyfrrt"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_lhft8"]
 [ext_resource type="PackedScene" uid="uid://bvumlqm6ud1fa" path="res://player/player.tscn" id="2_b14jm"]
 [ext_resource type="PackedScene" uid="uid://pqi3lgnlitel" path="res://mobs/sword_enemy.tscn" id="2_swvfj"]
 [ext_resource type="Script" uid="uid://bmn6x0325rf66" path="res://pickups/item/item.gd" id="4_4nod0"]
-[ext_resource type="PackedScene" uid="uid://w71yqwgucrij" path="res://pickups/item/pickup.tscn" id="4_swvfj"]
 [ext_resource type="Resource" uid="uid://b4v62jj54kqrk" path="res://pickups/item/resources/health_item.tres" id="5_dhv07"]
 [ext_resource type="Resource" uid="uid://ddxlhdk5j30a" path="res://pickups/item/resources/health_full_item.tres" id="6_88nnv"]
 [ext_resource type="PackedScene" uid="uid://bhaviey4xgcyp" path="res://pickups/chest/chest.tscn" id="8_a0kxm"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="8_lae3i"]
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="9_a0kxm"]
+[ext_resource type="PackedScene" uid="uid://c3fl3stluv0gn" path="res://levels/bridges.tscn" id="9_lae3i"]
+[ext_resource type="PackedScene" uid="uid://dlxjrgals3rg2" path="res://levels/invisible_walls.tscn" id="10_c0bdq"]
+[ext_resource type="Script" uid="uid://bteo15fr6ts1" path="res://levels/invisible_walls.gd" id="11_5ujae"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="11_c0bdq"]
 
 [node name="PlayerTest" type="Node2D"]
+y_sort_enabled = true
 
 [node name="RoomA" parent="." instance=ExtResource("1_lhft8")]
-
-[node name="SwordEnemy2" parent="RoomA" instance=ExtResource("2_swvfj")]
-position = Vector2(1245, 1256)
+position = Vector2(-72, 16)
 
 [node name="SwordEnemy" parent="RoomA" instance=ExtResource("2_swvfj")]
-position = Vector2(1013, 233)
-
-[node name="SwordEnemy3" parent="RoomA" instance=ExtResource("2_swvfj")]
-position = Vector2(-232, 1194)
+position = Vector2(840, 312)
 
 [node name="Chest" parent="RoomA" instance=ExtResource("8_a0kxm")]
-position = Vector2(496, 856)
+position = Vector2(1136, 1080)
 possible_items = Array[ExtResource("4_4nod0")]([ExtResource("6_88nnv"), ExtResource("5_dhv07")])
 
-[node name="Pickup" parent="RoomA" instance=ExtResource("4_swvfj")]
-position = Vector2(434, 468)
-item = ExtResource("5_dhv07")
+[node name="RoomB" parent="." instance=ExtResource("8_lae3i")]
+position = Vector2(2864, 16)
 
-[node name="Pickup2" parent="RoomA" instance=ExtResource("4_swvfj")]
-position = Vector2(288, 544)
-item = ExtResource("6_88nnv")
+[node name="SwordEnemy" parent="RoomB" instance=ExtResource("2_swvfj")]
+position = Vector2(184, 440)
+
+[node name="SwordEnemy2" parent="RoomB" instance=ExtResource("2_swvfj")]
+position = Vector2(1432, 896)
+rotation = -0.67675
+
+[node name="SwordEnemy3" parent="RoomB" instance=ExtResource("2_swvfj")]
+position = Vector2(1264, 24)
+rotation = 2.52267
+
+[node name="RoomC" parent="." instance=ExtResource("11_c0bdq")]
+position = Vector2(2608, -2424)
+
+[node name="Chest" parent="RoomC" instance=ExtResource("8_a0kxm")]
+position = Vector2(1328, 1216)
+possible_items = Array[ExtResource("4_4nod0")]([ExtResource("6_88nnv"), ExtResource("5_dhv07")])
+
+[node name="SwordEnemy" parent="RoomC" instance=ExtResource("2_swvfj")]
+position = Vector2(648, 648)
+
+[node name="SwordEnemy2" parent="RoomC" instance=ExtResource("2_swvfj")]
+position = Vector2(648, 648)
+
+[node name="SwordEnemy3" parent="RoomC" instance=ExtResource("2_swvfj")]
+position = Vector2(648, 648)
+
+[node name="Bridges" parent="." instance=ExtResource("9_lae3i")]
+position = Vector2(1328, 144)
+tile_map_data = PackedByteArray("AAABAAMAAAAAAAEAAAACAAMAAAAAAAEAAAADAAMAAAAAAAEAAAAEAAMAAAAAAAEAAAAFAAMAAAAAAAEAAAAGAAMAAAABAAEAAAAHAAMAAAACAAEAAAAIAAMAAAAAAAEAAAAJAAMAAAAAAAEAAAAKAAMAAAAAAAEAAAALAAMAAAAAAAEAAAAAAAMAAAAAAAEAAAAMAAMAAAAAAAEAAAATAP7/AAAFAAEAAAATAP3/AAAFAAEAAAATAPz/AAAFAAEAAAATAPv/AAAFAAEAAAATAPf/AAAFAAEAAAATAPb/AAAFAAEAAAATAPr/AAAFAAEAAAATAPn/AAAFAAEAAAATAPj/AAAFAAEAAAATAP//AAAFAAEAAAATAAAAAAAFAAEAAAA=")
+
+[node name="InvisibleWalls" parent="." instance=ExtResource("10_c0bdq")]
+unique_name_in_owner = true
+position = Vector2(-80, 16)
+tile_map_data = PackedByteArray("AAAMAAMAAAAAAAAAAAANAAMAAAAAAAAAAAAOAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAAQAAMAAAAAAAAAAAARAAMAAAAAAAAAAAASAAMAAAAAAAAAAAATAAMAAAAAAAAAAAAUAAMAAAAAAAAAAAAVAAMAAAAAAAAAAAAMAAUAAAAAAAAAAAANAAUAAAAAAAAAAAAOAAUAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAQAAYAAAAAAAAAAAARAAYAAAAAAAAAAAASAAYAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAASAAUAAAAAAAAAAAARAAUAAAAAAAAAAAAQAAUAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAUAAAAAAAAAAAAVAAUAAAAAAAAAAAAdAP7/AAAAAAAAAAAdAP3/AAAAAAAAAAAdAPz/AAAAAAAAAAAdAPv/AAAAAAAAAAAdAPr/AAAAAAAAAAAdAPn/AAAAAAAAAAAfAPn/AAAAAAAAAAAfAPr/AAAAAAAAAAAfAPv/AAAAAAAAAAAfAPz/AAAAAAAAAAAfAP3/AAAAAAAAAAAfAP7/AAAAAAAAAAA=")
+script = ExtResource("11_5ujae")
 
 [node name="Player" parent="." instance=ExtResource("2_b14jm")]
-position = Vector2(704, 640)
+position = Vector2(456, 928)
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("9_a0kxm")]

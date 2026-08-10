@@ -30,6 +30,8 @@ expand_margin_bottom = 2.0
 texture = ExtResource("9_hg6s5")
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 65
+collision_mask = 65
 motion_mode = 1
 script = ExtResource("1_g1dw6")
 
@@ -56,27 +58,9 @@ wait_time = 0.2
 unique_name_in_owner = true
 wait_time = 0.01
 
-[node name="WeaponPivot" type="Node2D" parent="."]
-unique_name_in_owner = true
-script = ExtResource("5_g6k8r")
-
-[node name="WeaponMarker" type="Marker2D" parent="WeaponPivot"]
-position = Vector2(80, 0)
-
-[node name="HandFire" type="Sprite2D" parent="WeaponPivot/WeaponMarker"]
-position = Vector2(8, -24)
-texture = ExtResource("5_qjkh3")
-
-[node name="HandFire2" type="Sprite2D" parent="WeaponPivot/WeaponMarker"]
-position = Vector2(8, 24)
-texture = ExtResource("5_qjkh3")
-flip_v = true
-
-[node name="Weapon" parent="WeaponPivot/WeaponMarker" instance=ExtResource("7_boad6")]
-unique_name_in_owner = true
-
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
+z_index = 20
 custom_minimum_size = Vector2(140, 0)
 anchors_preset = 8
 anchor_left = 0.5
@@ -97,3 +81,23 @@ max_value = 10.0
 step = 1.0
 value = 5.0
 show_percentage = false
+
+[node name="WeaponPivot" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 30
+script = ExtResource("5_g6k8r")
+
+[node name="WeaponMarker" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(80, 0)
+
+[node name="HandFire" type="Sprite2D" parent="WeaponPivot/WeaponMarker"]
+position = Vector2(8, -24)
+texture = ExtResource("5_qjkh3")
+
+[node name="HandFire2" type="Sprite2D" parent="WeaponPivot/WeaponMarker"]
+position = Vector2(8, 24)
+texture = ExtResource("5_qjkh3")
+flip_v = true
+
+[node name="Weapon" parent="WeaponPivot/WeaponMarker" instance=ExtResource("7_boad6")]
+unique_name_in_owner = true

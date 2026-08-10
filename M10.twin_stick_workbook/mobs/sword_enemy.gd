@@ -17,12 +17,14 @@ func _ready() -> void:
 	detector.body_entered.connect(on_body_entered)
 	detector.body_exited.connect(on_body_exited)
 	damage_dealer.body_entered.connect(on_damage_body_entered)
+	## determine random rotation on start:
+	rotation_degrees = randf_range(0.0, 360.0)
 
 func _physics_process(delta: float) -> void:
 	if (_player == null):
 		return
 	
-	var direction = position.direction_to(_player.position)
+	var direction = global_position.direction_to(_player.global_position)
 	var max_speed = direction * MAX_SPEED
 	velocity = velocity.move_toward(max_speed, ACCLERATION * delta)
 	var target_rotation = direction.angle()
