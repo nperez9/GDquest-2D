@@ -2,6 +2,7 @@
 @tool
 extends Node2D
 
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 @export var bullet_scene: PackedScene = preload("res://weapons/bullet.tscn")
 ## Maximum random angle applied to the shot bullets. Controls the gun's precision.
 @export_range(0.0, 10.0, 1.0, "radians_as_degrees") var spread_angle := 7.0
@@ -40,6 +41,7 @@ func shoot() -> void:
 		bullet.set_direction(Vector2.RIGHT.rotated(global_rotation))
 	else:
 		bullet.set_direction(_fire_direction.normalized())	
+	audio_stream_player.play()
 	
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings = PackedStringArray()

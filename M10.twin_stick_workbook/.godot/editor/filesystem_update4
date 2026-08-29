@@ -2,11 +2,5 @@ res://default_env.tres
 res://player/player.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
-res://levels/test/player_test.tscn
-res://pickups/item/pickup.tscn
-res://pickups/chest/chest.tscn
-res://mobs/sword_enemy.tscn
-res://mobs/sword_enemy.gd
-res://My_todo.txt
-res://levels/rooms/room_a.tscn
-res://levels/invisible_walls.gd
+res://addons/gdpractice/assets/theme.tres
+res://weapons/weapon.gd

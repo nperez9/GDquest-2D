@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvumlqm6ud1fa"]
+[gd_scene load_steps=17 format=3 uid="uid://bvumlqm6ud1fa"]
 
 [ext_resource type="Script" uid="uid://ig88xdq0qrk8" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://5ays6kuo0xio" path="res://common/shadow.tscn" id="1_rkbax"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dkhntnns8apgw" path="res://weapons/weapon.tscn" id="7_boad6"]
 [ext_resource type="Texture2D" uid="uid://n26w4ph7i71w" path="res://ui/bars/health_point_bg.png" id="8_rgyib"]
 [ext_resource type="Texture2D" uid="uid://206pnoc2labm" path="res://ui/bars/health_point.png" id="9_hg6s5"]
+[ext_resource type="AudioStream" uid="uid://cbp6piwf7l7to" path="res://common/sounds/laser.wav" id="10_2ieo8"]
+[ext_resource type="AudioStream" uid="uid://cfd1kc11qssi5" path="res://weapons/shoot_lightning.wav" id="11_ebec5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
 radius = 24.0
@@ -28,6 +30,12 @@ expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8t03j"]
 texture = ExtResource("9_hg6s5")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hg6s5"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("10_2ieo8")
+stream_1/stream = ExtResource("11_ebec5")
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 65
@@ -101,3 +109,8 @@ flip_v = true
 
 [node name="Weapon" parent="WeaponPivot/WeaponMarker" instance=ExtResource("7_boad6")]
 unique_name_in_owner = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WeaponPivot/WeaponMarker/Weapon"]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_hg6s5")
+bus = &"Sounds"
