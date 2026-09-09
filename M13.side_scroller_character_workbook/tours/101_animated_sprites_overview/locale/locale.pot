@@ -1,0 +1,265 @@
+# LANGUAGE translation for M13. Side-Scroller Character for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/101_animated_sprites_overview/101_animated_sprites_overview.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M13. Side-Scroller Character\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd:524
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:566
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:589
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:688
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:718
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:744
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:795
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:814
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:871
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:935
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:13
+msgid "Overview of the animated sprite editor"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:14
+msgid "LET'S GET STARTED!"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:16
+msgid "In this tour, you'll get an overview of Godot's built-in editor to set up flipbook animations for your 2D games."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:19
+msgid "We can access this editor through the [b]AnimatedSprite2D[/b] node. This node plays frame-by-frame animations loaded from sequences of images."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:22
+msgid "It's the traditional way of making animations and it works well for pixel art games or when you have a traditional animator in your team."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:25
+msgid "The next two tours will guide you through the process of setting up animations step-by-step."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:37
+msgid "What is AnimatedSprite2D?"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:40
+msgid "The [b]AnimatedSprite2D[/b] node is a slightly more powerful variant of the Sprite2D node that supports 2D flipbook style animations out of the box."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:41
+msgid "It comes with a dedicated editor to set up hand-drawn frame by frame animations easily."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:42
+msgid "It's perfect for character animations in pixel art games."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:48
+msgid "See the finished result"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:68
+msgid "I've opened a scene with an animated character using the [b]AnimatedSprite2D[/b] node."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:69
+msgid "This character has four animations: \"Fall\", \"Idle\", \"Jump\", and \"Run.\" These animations can be triggered during gameplay."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:75
+msgid "The SpriteFrames editor"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:81
+msgid "Because this node already has animations set up, selecting it opens the corresponding bottom panel: the [b]SpriteFrames[/b] editor."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:82
+msgid "Let's run through the different parts of the editor."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:87
+msgid "The animation list"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:93
+msgid "On the left side of the SpriteFrames editor is the [b]Animation List[/b]."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:94
+msgid "This area displays all animations for your sprite. You can add, remove, rename, and select animations here."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:95
+msgid "Each character or object can have multiple animations like \"Idle\", \"Run\", or \"Jump\", and you can play any of them in the running game."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:100
+msgid "Animation toolbar controls"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:106
+msgid "Above the animation list, you'll find controls to manage animations:"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:108
+msgid "The three icons on the left %s create, %s duplicate, or %s delete animations"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:109
+msgid "The %s [b]Autoplay on Load[/b] icon determines if the animation plays automatically when the game starts"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:110
+msgid "The %s [b]Animation Looping[/b] toggle button determines if animations repeat"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:111
+msgid "The [b]FPS[/b] field controls the selected animation's speed in frames per second"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:117
+msgid "The frames view"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:123
+msgid "The area on the right is the [b]Frames View[/b], which displays all individual sprite frames in the currently selected animation."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:124
+msgid "Each frame represents one image in your flipbook animation sequence. When played in order at the specified speed, these frames create the illusion of movement."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:129
+msgid "Frames toolbar controls"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:135
+msgid "At the top of the frames view, you'll find a toolbar with buttons to play and edit your animation:"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:137
+msgid "On the left are the animation playback controls"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:138
+msgid "The next buttons add, copy, move, and delete frames"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:139
+msgid "The [b]Frame Duration[/b] field controls the duration of the selected frames relative to the others"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:145
+msgid "Try playing an animation"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:157
+msgid "Let's preview the selected animation right in the editor!"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:158
+msgid "In the [b]Animation List[/b] on the left, make sure that the [b]run[/b] animation is selected."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:159
+msgid "Then, click the %s [b]Play[/b] button. Click it to play the animation."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:160
+msgid "Notice how the frames play in sequence and loop. You can click the %s [b]Pause[/b] button to pause the animation."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:163
+msgid "Play selected animation"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:166
+msgid "Run the scene"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:172
+msgid "I just opened a game level for you to try and see the character in action."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:173
+msgid "Click the [b]Run Current Scene[/b] button to play."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:174
+msgid "Use the arrow keys to move the character and space to jump. Watch how the animations change based on what the character is doing! The character uses the animations defined in the SpriteFrames editor."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:175
+msgid "When you're done exploring, close the game window to return to the editor."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:183
+msgid "Conclusion"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:184
+msgid "CONTINUE"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:186
+msgid "That's a brief overview of the [b]AnimatedSprite2D[/b] node's editor interface and tools."
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:189
+msgid "You've seen the different parts of the [b]SpriteFrames[/b] editor:"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:191
+msgid "The [b]Animation List[/b] lets you create and rename animations"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:192
+msgid "The [b]Frames View[/b] shows all frames in the current animation"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:193
+msgid "The toolbars above the animation list and frames view let you edit animations and frames"
+msgstr ""
+
+#: tours/101_animated_sprites_overview/101_animated_sprites_overview.gd:198
+msgid "In the next tour, you'll create an animation step-by-step. You'll learn how to create a new animation, add frames, and adjust the playback speed of your animations. See you there!"
+msgstr ""

@@ -1,0 +1,355 @@
+# LANGUAGE translation for M13. Side-Scroller Character for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/103_manipulating_frames/103_manipulating_frames.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M13. Side-Scroller Character\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd:524
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:566
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:589
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:688
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:718
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:744
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:795
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:814
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:871
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:935
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:16
+msgid "Manipulating animation frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:17
+msgid "LET'S GET STARTED!"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:19
+msgid "In this tour, you'll learn how to manipulate individual frames in the SpriteFrames editor."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:22
+msgid "You'll create an animation of a character blinking occasionally."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:40
+msgid "Creating a new animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:46
+msgid "It's common in games to have an idle animation with the character mostly standing still and blinking occasionally. That's what we'll create in this tour."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:47
+msgid "Click the %s [b]New Animation[/b] button at the top left of the editor."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:50
+msgid "Add Animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:53
+msgid "Renaming the new animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:59
+msgid "Animations are created with the default name [b]new_animation[/b]. This could be clearer so let's rename it."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:60
+msgid "Click on [b]new_animation[/b] in the animation list to rename it. Type [b]idle[/b] and press Enter."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:64
+msgid "Rename [b]new_animation[/b] to [b]idle[/b]"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:78
+msgid "The idle animation frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:84
+msgid "For the idle animation, we'll use two frames to make the character blink occasionally: one where the character is standing with open eyes and one where her eyes are closed."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:85
+msgid "In the [b]FileSystem[/b] dock, find and select the idle animation images ([b]idle.png[/b] and [b]blinking.png[/b]). You can press the [b]Crtl[/b] key ([b]Cmd[/b] on macOS) before clicking to add a file to the selection."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:89
+msgid "Select the [b]blinking.png[/b] and [b]idle.png[/b] files in the [b]FileSystem[/b] dock"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:109
+msgid "Adding the idle frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:116
+msgid "Drag and drop the selected idle images into the [b]Frames View[/b] of the SpriteFrames editor."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:117
+msgid "You should end with two frames in the [b]Frames View[/b]: one for the standing pose and one for the blinking pose."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:121
+msgid "Add the standing and blinking frames to the animation."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:142
+msgid "Reordering the frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:148
+msgid "The frames were added based on their order in the [b]FileSystem[/b] dock: the blinking frame first, and the standing frame second."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:149
+msgid "For our idle animation, we need to swap them: the standing pose should be frame [b]0[/b] (the first frame), and the blinking pose frame [b]1[/b] (the second frame)."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:150
+msgid "You can reorder the frames by dragging and dropping them within the [b]Frames View[/b]."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:154
+msgid "Ensure the standing pose is frame [b]0[/b] and the blinking pose is frame [b]1[/b]"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:167
+msgid "Previewing the animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:173
+msgid "Good job! Now, click the %s [b]Play[/b] icon to preview the animation."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:174
+msgid "As both frames have the same duration, the result looks off: the character blinks continuously."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:175
+msgid "Instead, we want the character to only blink occasionally, so we need to adjust the timing of these frames."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:178
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:220
+msgid "Play the animation."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:181
+msgid "Adjusting individual frame duration"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:190
+msgid "We can adjust the duration of individual frames using the [b]Frame Duration[/b] field in the toolbar above the frames view."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:191
+msgid "In the [b]Frames View[/b], select the frame [b]0[/b] (the standing pose)."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:192
+msgid "With the frame selected, head to the [b]Frame Duration[/b] field at the top right of the SpriteFrames editor."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:193
+msgid "Change the value from [b]1.0[/b] to [b]20.0[/b] and press [b]Enter[/b]. This makes this frame stay on screen 20 times longer than the default duration."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:197
+msgid "Change the [b]Frame Duration[/b] of the frame [b]0[/b] to [b]20.0[/b]"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:210
+msgid "Previewing the adjusted animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:216
+msgid "Click the %s [b]Play[/b] button again to preview the animation with the adjusted timing."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:217
+msgid "Now the character stays in the standing pose for much longer and only blinks occasionally. This is more natural!"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:223
+msgid "Creating a blinking pattern"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:229
+msgid "Now let's make the character blink twice in a row before returning to the long idle pose. It'll make the animation nicer and it'll teach you how to copy and paste frames."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:230
+msgid "First, we have to select the frames we want to copy."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:231
+msgid "Click on the first frame, then hold [b]Shift[/b] and click on the second frame to select both frames."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:235
+msgid "Select both animation frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:242
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:257
+msgid "Pasting frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:251
+msgid "With both frames selected, click the %s [b]Copy Frames[/b] button above the [b]Frames View[/b] to copy the frames in the clipboard."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:266
+msgid "Now click the %s [b]Paste Frames[/b] button. This duplicates the copied frames and inserts them at the end of the animation."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:272
+msgid "The updated animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:278
+msgid "Click the %s [b]Play[/b] button to preview the animation."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:279
+msgid "Copying and pasting the frames duplicated our animation. The character waits for a long time, blinks, and repeats the pattern."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:280
+msgid "We can adjust the third frame's duration to make the character blink twice in a row."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:285
+msgid "Changing the second idle pose duration"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:294
+msgid "Click on frame [b]2[/b] (the second standing pose) to select it. Then, change the [b]Frame Duration[/b] from [b]20.0[/b] to [b]2.0[/b]."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:295
+msgid "This will result in a much shorter idle pose and make the character blink twice in a row before returning to the long idle pose."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:299
+msgid "Change the [b]Frame Duration[/b] of frame [b]2[/b] to [b]2.0[/b]"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:308
+msgid "Previewing the idle animation"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:314
+msgid "Click the [b]Play[/b] button to preview the idle animation with the adjusted timing."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:315
+msgid "It looks much nicer, doesn't it?"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:318
+msgid "Play"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:321
+msgid "Reviewing what we've done"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:326
+msgid "Let's review how we created the idle animation:"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:328
+msgid "Frame [b]0[/b] (the standing pose) lasts 20 frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:329
+msgid "Frame [b]1[/b] (the first blink) shows briefly for one frame"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:330
+msgid "Frame [b]2[/b] (standing pose again) lasts 2 frames"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:331
+msgid "Frame [b]3[/b] (blinking again) shows briefly for one frame before the cycle repeats"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:333
+msgid "All it took was 2 textures! By reordering the frames and adjusting their durations, you could create a nice idle animation."
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:340
+msgid "Congratulations!"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:341
+msgid "CONTINUE"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:343
+msgid "You've successfully learned how to use the [b]AnimatedSprite2D[/b] node and [b]SpriteFrames[/b] editor to create frame-by-frame animations!"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:346
+msgid "In this tour, you've learned how to:"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:348
+msgid "Modify individual frame durations"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:349
+msgid "Drag and drop frames in the [b]Frames View[/b] to reorder them"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:350
+msgid "Copy and paste frames to duplicate them"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:354
+msgid "Between the previous tour and this one, you learned the features you'll use most often in the [b]SpriteFrames[/b] editor!"
+msgstr ""
+
+#: tours/103_manipulating_frames/103_manipulating_frames.gd:355
+msgid "After completing this tour, you can keep experimenting and return to GDSchool to continue with this module's lessons whenever you want."
+msgstr ""

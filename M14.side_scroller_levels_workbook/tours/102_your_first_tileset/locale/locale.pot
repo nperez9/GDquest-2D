@@ -1,0 +1,479 @@
+# LANGUAGE translation for M14. Side Scroller Levels for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/102_your_first_tileset/102_your_first_tileset.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M14. Side Scroller Levels\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd:524
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:566
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:589
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:688
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:718
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:744
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:795
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:814
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:871
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:935
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:17
+msgid "Setting Up Your First Godot Tileset!"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:18
+msgid "LET'S GET STARTED!"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:20
+msgid "In this tour, you'll learn how to create and set up a tileset in Godot."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:23
+msgid "You'll create a tileset from scratch, add tiles to it, and use your tileset to draw a simple platform."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:26
+msgid "In the next tour, you'll add collision shapes to your tiles to prevent the player from falling through the platform."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:44
+msgid "TileMapLayer and TileSet"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:47
+msgid "To draw tilemap-based levels, you need two components:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:49
+msgid "A [b]TileSet[/b]. It's a resource that you assign to a [b]TileMapLayer[/b] node. It defines your available tiles and their properties."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:50
+msgid "A [b]TileMapLayer[/b] node. This node creates a grid where you can draw tiles to create a level."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:52
+msgid "Think of the [b]TileSet[/b] as a palette of stamps to paint with, and the [b]TileMapLayer[/b] node as your canvas."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:57
+msgid "Opening the starting scene"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:60
+msgid "Let's get ready to create the tileset. First, open the starting scene I've prepared: [b]creating_tilesets.tscn[/b]."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:61
+msgid "This scene contains a playable character that can move and jump. We'll use this character to test our tileset once it's created."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:68
+msgid "Creating the TileMapLayer node"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:71
+msgid "Let's create a [b]TileMapLayer[/b] node first. It allows us to easily create and test the [b]TileSet[/b] resource."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:75
+msgid "Create a [b]TileMapLayer[/b] node as a child of the scene root node."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:87
+msgid "Rename the new [b]TileMapLayer[/b] node to [b]Ground[/b]."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:101
+msgid "Creating a TileSet resource"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:106
+msgid "You now have a [b]TileMapLayer[/b] node in your scene. The next step is to create a [b]TileSet[/b] resource that defines the tiles we can use in this layer."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:107
+msgid "In the [b]Inspector[/b] dock, click the field next to the [b]Tile Set[/b] property and select [b]New TileSet[/b]."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:108
+msgid "This creates an empty [b]TileSet[/b] resource that we'll configure in the next steps."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:112
+msgid "Assign a [b]TileSet[/b] resource to the [b]Tile Set[/b] property."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:129
+msgid "Setting the tile size"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:134
+msgid "The engine needs to know the size of individual tiles in the tileset to draw them correctly."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:135
+msgid "The [b]TileSet[/b] resource's [b]Tile Size[/b] property controls the size of each tile in pixels. Its value should match the size of your tile art assets."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:136
+msgid "Our artist drew tiles that are 16x16 pixels. Luckily for us, that's the default value when you create a [b]TileSet[/b] resource! We can use the default value."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:143
+msgid "Opening the TileSet editor"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:148
+msgid "When selecting a [b]TileMapLayer[/b] node, the editor reveals the [b]TileMap editor[/b]. This bottom panel allows you to draw tiles in the level."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:149
+msgid "We don't have any tiles yet, so we cannot draw anything! Open the [b]TileSet editor[/b] so we can start adding tiles to the TileSet."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:154
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:398
+msgid "Open the TileSet editor."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:161
+msgid "The TileSet editor"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:166
+msgid "The [b]TileSet editor[/b] is where we define our tiles and their properties."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:167
+msgid "The [b]Tile Sources[/b] tab on the left lists textures containing multiple tiles that you add to the tileset."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:168
+msgid "The empty area on the right allows you to select and change the properties of individual tiles in a tile source."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:174
+msgid "Tile sources"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:179
+msgid "We call the texture containing tiles a [b]Tile Source[/b]. It's a single image containing multiple tiles arranged in a grid."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:180
+msgid "To define what tiles are available in the tileset, you add a tile source, and then you define which parts of the images should be usable as tiles."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:181
+msgid "Our artist prepared tile sources for you to use in this module. We'll use this one to create our first tileset:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:188
+msgid "Understanding tile creation options"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:193
+msgid "There are two ways to create tiles from a source:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:195
+msgid "[b]Automatically:[/b] Godot creates tiles for all non-transparent regions in the source for you. When you select [b]Yes[/b] in the popup, Godot uses this method."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:196
+msgid "[b]Manually:[/b] You select and create individual tiles yourself."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:198
+msgid "For now we will do this manually (note: A popup will appear in the next step to give you this choice. Remember to select \"No\")."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:203
+msgid "Adding the tile source"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:208
+msgid "Let's add our first tile source. In the [b]FileSystem[/b] dock, locate the image [b]%s[/b]. This image contains all the ground tiles we'll use in our level."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:209
+msgid "Drag and drop it onto the tile source area in the TileSet editor."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:210
+msgid "[b]Important:[/b] Remember to select [b]No[/b] in the popup that'll appear so we can create tiles manually."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:216
+msgid "Add the [b]%s[/b] file to the [b]TileSet[/b] resource."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:235
+msgid "Naming the source"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:240
+msgid "Let's give our source a descriptive name to keep things organized. By default, the name is set to the file name, but we can change it to something simpler."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:241
+msgid "In the middle column of the TileSet editor, set the [b]Name[/b] property to [b]Ground[/b]."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:246
+msgid "Rename the tile source to [b]Ground[/b]."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:264
+msgid "Creating your first tile manually"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:269
+msgid "Now that we have our source, let's create our first tile manually:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:271
+msgid "Make sure the %s [b]Setup[/b] tool is active in the TileSet editor toolbar"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:272
+msgid "Click on a tile in the source image on the right (choose one of the ground tiles with grass on top)"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:274
+msgid "You'll see a highlighted border around the selected tile, which means it's now available to draw."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:282
+msgid "Create at least one tile by clicking on a tile in the tile source."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:300
+msgid "Opening the TileMap editor"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:305
+msgid "That's it! You've created your first tile."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:306
+msgid "Let's switch to the [b]TileMap[/b] editor to start drawing with our tile."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:312
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:436
+msgid "Open the TileMap editor."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:319
+msgid "Drawing your first tile"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:324
+msgid "Let's draw with our manually created tile. For that, you need to select the %s [b]Paint Tool[/b] in the TileMap editor toolbar:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:325
+msgid "1. Make sure the %s [b]Paint Tool[/b] is selected"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:326
+msgid "2. Look at the tile palette on the right side of the editor. You should see your tile there"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:327
+msgid "3. Click on this tile in the palette to select it"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:338
+msgid "Placing the tile"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:343
+msgid "With the %s paint tool and tile selected, you can now place it on the grid."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:344
+msgid "Click in the 2D viewport to draw the tile. Place a tile right below the player character, so they can stand on it."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:345
+msgid "If you're having trouble drawing:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:347
+msgid "Make sure the %s [b]Select Mode[/b] is active in the viewport toolbar as other modes won't let you draw"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:348
+msgid "Check that your tile is selected in the palette (it should have a highlighted border)"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:357
+msgid "Select Mode"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:359
+msgid "Place a ground tile below the player character."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:386
+msgid "Populating tiles automatically"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:391
+msgid "Instead of enabling tiles in a tile source manually, we can populate them all automatically."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:392
+msgid "Let's return to the [b]TileSet editor[/b] and do that next."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:405
+msgid "Using the auto-creation tool"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:410
+msgid "You can use the auto-creation tool to add all remaining tiles from the tile source at any time:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:412
+msgid "In the TileSet editor, click the [b]Three Dots[/b] button on the right of the tileset toolbar"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:413
+msgid "Select [b]Create Tiles in Non-Transparent Texture Regions[/b]"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:415
+msgid "All tiles from the tile source will be automatically detected and created!"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:424
+msgid "Returning to the TileMap editor"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:429
+msgid "Now that we have all our tiles available, let's return to the TileMap editor and draw a few more tiles."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:430
+msgid "Click the [b]TileMap button[/b] at the bottom of the editor."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:443
+msgid "Creating platforms"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:448
+msgid "You now have all the tiles needed to create a platform for our character to stand on."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:449
+msgid "In the tile palette on the right, select individual tiles and try to draw a small complete platform in the viewport using the %s [b]Paint Tool[/b]."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:450
+msgid "[b]Left Click[/b] to paint tiles in the viewport and [b]Right Click[/b] to erase them."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:451
+msgid "Take as little or as much time as you'd like to create a platform. This is a moment for you to experiment with the tiles and see how they fit together."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:462
+msgid "Saving the TileSet"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:467
+msgid "Let's save our [b]TileSet[/b] as a resource file so you can reuse it later:"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:468
+msgid "1. In the [b]Inspector[/b], right-click the [b]Tile Set[/b] property"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:469
+msgid "2. Select [b]Save As...[/b] and save it to [b]%s[/b] (Godot will suggest this name by default)"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:470
+msgid "Saving your [b]TileSet[/b] as a separate resource means you can reuse it across multiple [b]TileMapLayer[/b] nodes and game levels without duplicating work."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:475
+msgid "Save the TileSet resource as [b]%s[/b]"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:484
+msgid "Testing the scene"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:489
+msgid "Let's run the scene to test our tilemap with the character. Click the [b]Run Current Scene[/b] button to start the game."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:490
+msgid "You'll notice the character falls right through our tiles. This happens because we haven't added collision shapes to our tileset yet!"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:491
+msgid "The character doesn't \"see\" the tiles as physical objects. We have to add collision shapes to the tiles so the player can stand on them. That's what we'll do in the next tour."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:499
+msgid "Mission accomplished!"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:500
+msgid "CONTINUE"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:502
+msgid "You now know how to create a basic tileset in Godot!"
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:505
+msgid "Your progress will be saved if you quit now."
+msgstr ""
+
+#: tours/102_your_first_tileset/102_your_first_tileset.gd:508
+msgid "In the next tour, we'll add collision shapes to our tiles so the character can stand on them."
+msgstr ""

@@ -1,0 +1,373 @@
+# LANGUAGE translation for M14. Side Scroller Levels for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/103_adding_collision_shapes/103_adding_collision_shapes.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M14. Side Scroller Levels\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd:524
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:566
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:589
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:688
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:718
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:744
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:795
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:814
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:871
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:935
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:11
+msgid "Adding Physics to Your Tileset!"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:12
+msgid "LET'S GET STARTED!"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:14
+msgid "In this tour, you learn how to add collision shapes to your tileset tiles."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:17
+msgid "You'll create physics layers and add rectangular collision shapes to make tiles solid so the player can stand on a platform."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:20
+msgid "In the next tour, you'll learn how to set up one way collision for platforms the player can jump through from below and stand on."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:36
+msgid "Collisions in tilemaps"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:39
+msgid "The tiles in a tilemap start without collision shapes. This means that when you draw tiles, by default, they are just visual elements without any physics properties."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:40
+msgid "You need to add collision shapes to relevant tiles to make them solid and stop the player from falling through them."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:41
+msgid "Before we can add collision shapes, we need to add a [b]Physics Layer[/b] in the TileSet to enable collisions on it. We can do that by editing the TileSet resource in the [b]Inspector[/b]."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:46
+msgid "Selecting the Ground node"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:52
+msgid "Make sure that the [b]Ground[/b] node is selected to reveal its properties in the [b]Inspector[/b]."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:58
+msgid "Reveal the TileSet physics layers"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:64
+msgid "Let's reveal the physics layers in the [b]Inspector[/b]:"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:65
+msgid "1. Click the [b]Tile Set[/b] property to expand the TileSet resource if it isn't already open"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:66
+msgid "2. Locate and click the [b]Physics Layers[/b] category to open it"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:72
+msgid "Creating a physics layer"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:76
+msgid "The physics layers start out empty, so we need to create a new one."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:77
+msgid "Click the [b]Add Element[/b] button under the [b]Physics Layers[/b] section to add a new physics layer."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:81
+msgid "Add a physics layer to the [b]TileSet[/b] resource"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:92
+msgid "Understanding collision layers"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:96
+msgid "You now have one physics layer associated with your tileset!"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:97
+msgid "Just like Godot's physics bodies and area nodes, this physics layer comes with two important properties: [b]Collision Layer[/b] and [b]Collision Mask[/b]."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:98
+msgid "These properties work the same as any other physics body or area node in Godot. Let's review each of them."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:103
+msgid "The collision layer property"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:107
+msgid "The [b]Collision Layer[/b] controls which physics layer the tilemap is on. It allows [b]other[/b] objects to detect the tilemap's platforms."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:108
+msgid "Think of it as a \"tag\" the physics engine uses to identify the tilemap. It allows entities like the player character to stand on platforms."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:109
+msgid "The player character is set up to look for ground on collision layer 2, so we need to change the [b]Collision Layer[/b] from [b]1[/b] to [b]2[/b]."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:110
+msgid "Click the lit field labeled [b]1[/b] below \"Collision Layer\" to disable it, then click the field labeled [b]2[/b] to enable it."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:114
+msgid "Set the collision layer to 2"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:128
+msgid "The collision mask property"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:132
+msgid "The [b]Collision Mask[/b] controls which other physics objects the tilemap itself can detect."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:133
+msgid "We don't need the tilemap to detect anything - we just want the player character to be able to detect the tilemap."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:134
+msgid "Let's remove the [b]Collision Mask[/b]. Click the lit field labeled [b]1[/b] below \"Collision Mask\" to disable it."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:138
+msgid "Remove the collision mask 1"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:149
+msgid "Opening the TileSet editor"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:155
+msgid "Let's open the [b]TileSet editor[/b] to add collision shapes to our tiles."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:159
+msgid "Open the TileSet editor."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:166
+msgid "Activating the Select tool"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:172
+msgid "We want to add the same collision shape to all our solid ground tiles at once. For that, we need to select them all."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:173
+msgid "First, let's make sure we have the right tool active. Click the %s [b]Select Tool[/b] in the TileSet editor toolbar."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:177
+msgid "Activate the Select Tool"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:185
+msgid "Selecting all tiles"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:191
+msgid "Now let's select all the solid ground tiles at once."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:192
+msgid "Click and drag from the top left tile to the bottom right tile to select all the solid ground tiles in the tiles view."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:193
+msgid "Use the zoom controls at the top left of the tiles view to zoom in and out if needed. Press the [b]Middle Mouse Button[/b] to pan the view."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:198
+msgid "Accessing physics properties"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:202
+msgid "Selecting one or more tiles reveals their properties in the middle column of the TileSet editor. This column works like the [b]Inspector[/b] dock: it shows the properties of the selected tiles."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:203
+msgid "In the middle column, expand the [b]Physics[/b] section and then [b]Physics Layer 0[/b] to access the physics properties of the selected tiles."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:208
+msgid "Expanding the TileSet editor"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:214
+msgid "The TileSet editor can sometimes be too small to see all the properties. We can expand it to fill the entire Godot editor vertically by clicking the [b]Expand Bottom Panel[/b] button (Shift+F12) at the bottom right of the TileSet editor."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:215
+msgid "This button works for all bottom panels in Godot, so you can use it to quickly resize the editor to your liking."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:219
+msgid "Expand the bottom panel"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:227
+msgid "The collision shape editor"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:233
+msgid "Now, we can see the tiles' physics properties more comfortably. Let's focus on the [b]Physics Layer 0[/b] section once more."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:234
+msgid "This section offers an editor to add collision shapes to the selected tiles. It works similarly to the [b]CollisionPolygon2D[/b] node, as it allows you to draw polygons to define the collision shapes."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:239
+msgid "The collision shape editor toolbar"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:243
+msgid "The toolbar above the collision shape editor contains several buttons to add, select, and remove points from the collision shape."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:244
+msgid "On the right, the %s [b]Grid Snap[/b] icon lets you choose whether to snap the points to a grid or not. This is useful for aligning the points of the collision shape to pixel-perfect positions."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:249
+msgid "Adding a square collision shape"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:253
+msgid "Now let's add a collision shape. We want every tile to have a rectangular collision shape that covers the entire tile."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:254
+msgid "For that, we can use the [b]Reset to default tile shape[/b] menu option:"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:255
+msgid "1. Click the %s [b]three vertical dots[/b] button in the collision shape editor toolbar"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:256
+msgid "2. Select [b]Reset to default tile shape[/b] from the menu"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:257
+msgid "You can also press the [b]F[/b] key with the collision shape editor focused."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:261
+msgid "Add a square collision shape to the selected tiles"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:273
+msgid "Verifying the collision shapes"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:279
+msgid "You should now see a light blue polygon overlaid on each of your selected tiles in the tiles view on the right."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:280
+msgid "Because all your tiles are selected, you just created a collision shape for all of them at once! This is a great way to save time when working with large tilesets."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:285
+msgid "Running the scene"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:291
+msgid "Let's test our collisions by running the scene."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:292
+msgid "Click the [b]Run Current Scene[/b] button to run the game."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:293
+msgid "Here are the controls to move the character:"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:295
+msgid "Use the arrow keys to move"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:296
+msgid "Press the [b]C[/b] key to jump"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:298
+msgid "Now, the character should be able to stand on the platforms instead of falling through them!"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:306
+msgid "Marvelous!"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:307
+msgid "CONTINUE"
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:309
+msgid "You now have a tileset with working collision shapes that can interact with physics bodies."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:312
+msgid "Your progress will be saved if you quit now."
+msgstr ""
+
+#: tours/103_adding_collision_shapes/103_adding_collision_shapes.gd:315
+msgid "In the next tour, we'll learn how to set up one-way tiles that the character can jump through from below and stand on."
+msgstr ""

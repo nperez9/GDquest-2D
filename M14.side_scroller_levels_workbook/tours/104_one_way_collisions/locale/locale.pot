@@ -1,0 +1,261 @@
+# LANGUAGE translation for M14. Side Scroller Levels for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/104_one_way_collisions/104_one_way_collisions.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M14. Side Scroller Levels\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd:524
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:566
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:589
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:688
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:718
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:744
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:795
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:814
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:871
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:935
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:51
+msgid "One-way collisions in tilesets"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:52
+msgid "LET'S GET STARTED!"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:54
+msgid "In this tour, you practice adding a new tile source with one-way platforms to your tileset."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:57
+msgid "You'll build upon what you learned in Tour 103 to add mushroom platforms that the character can jump through and stand on."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:74
+msgid "Adding more tile sources"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:77
+msgid "In the previous tours, you learned how to add a tile source and set up a physics layer with collision shapes on your tiles. You added collision shapes to every tile."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:78
+msgid "You can add multiple tile sources to a tileset and add collision shapes and change their properties more selectively."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:79
+msgid "Let's build upon what you learned and go one step further."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:86
+msgid "Challenge: add a mushroom tile source"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:89
+msgid "Your mission, if you accept it, is to add and configure a new tile source to your tile set: mushroom platforms with a cap that the player can jump through."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:90
+msgid "This time, I will not guide you every step of the way. Instead, you will have to use what you learned in the previous tours to achieve this goal."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:91
+msgid "To begin the challenge, let's make sure you have the [b]Ground[/b] node selected in the scene tree and open the [b]TileSet editor[/b]."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:99
+msgid "Open the TileSet editor."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:108
+msgid "Adding the mushroom tile source"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:111
+msgid "Your first task is to add the mushroom tile source to your tileset resource and create tiles for every part of the mushrooms."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:112
+msgid "The editor can create tiles for you automatically by selecting [b]Yes[/b] in the dialog that appears when you add a tile source."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:118
+msgid "Add the [b]mushroom.png[/b] tile source to the tileset"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:134
+msgid "Create tiles for every part of the mushroom"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:158
+msgid "Adding a collision shape to the mushroom cap tiles"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:161
+msgid "Great job! Now that you have added the mushroom tile source, it's time to add a collision shape to the mushroom cap tiles. The cap tiles are the top row of the mushroom tile source."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:162
+msgid "Be sure to [b]only add the collision shape to the mushroom cap tiles[/b], not the stem!"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:167
+msgid "Turn on the Select tool in the Tileset editor"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:174
+msgid "Add collision shapes to the mushroom cap tiles"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:202
+msgid "Setting up one-way collisions"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:205
+msgid "You now have a collision shape on the mushroom cap tiles, but by default it's solid and the player cannot jump through it from below."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:206
+msgid "To set up one-way collisions, expand the [b]Polygon 0[/b] and turn on the one-way collision property. This will turn selected tiles into one-way platforms."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:211
+msgid "Set up one-way collisions on the mushroom cap tiles"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:235
+msgid "Try it out!"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:238
+msgid "Try painting a mushroom cap tile above a platform in the viewport! Open the [b]TileMap editor[/b] and select the mushroom cap tile."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:239
+msgid "In the TileMap editor, select the [b]Paint tool[/b] and click and drag over the mushroom tiles to select them all."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:240
+msgid "Then, [b]Left-Click[/b] in the viewport to stamp the entire mushroom at once."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:241
+msgid "Right-click in the viewport to erase tiles if you make a mistake."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:247
+msgid "Open the TileMap editor."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:254
+msgid "Paint a mushroom in the level"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:270
+msgid "Run the scene"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:273
+msgid "Give the scene a try! Press the [b]Play Current Scene[/b] button in the top right corner of the editor."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:274
+msgid "You should be able to jump through the mushroom cap tiles from below and stand on them. If you misplaced the mushroom cap tiles and platforms, go back to the previous step and try again."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:275
+msgid "Controls:"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:277
+msgid "Arrow Keys to move left and right"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:278
+msgid "C to jump"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:283
+msgid "Play Current Scene"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:288
+msgid "Amazing!"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:289
+msgid "CONTINUE"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:291
+msgid "You now have a second tile source in your tileset with one-way platforms that the player can jump through."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:294
+msgid "Your progress will be saved if you quit now."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:326
+msgid "Mushroom tile source not found. Cannot check that the mushroom cap was drawn."
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:335
+msgid "Checking cell: %s"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:337
+msgid "Tile data for cell %s: %s"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:339
+msgid "No tile data found at %s"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:343
+msgid "Atlas coords for cell %s: %s"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:345
+msgid "Atlas coords don't match expected %s"
+msgstr ""
+
+#: tours/104_one_way_collisions/104_one_way_collisions.gd:351
+msgid "Mushroom cap complete at cell %s"
+msgstr ""

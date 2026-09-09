@@ -1,0 +1,305 @@
+# LANGUAGE translation for M13. Side-Scroller Character for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/102_creating_animation/102_creating_animation.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M13. Side-Scroller Character\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd:524
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:566
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:589
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:688
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd:718
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:744
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:795
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:814
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:871
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd:935
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:13
+msgid "Creating an animation"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:14
+msgid "LET'S GET STARTED!"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:16
+msgid "Now that you know the SpriteFrames editor's interface, let's create a new animation from the ground up."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:19
+msgid "In this tour, you'll learn the workflow for setting up looping character animations that you can use in your own games."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:37
+msgid "Creating a new scene"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:43
+msgid "Let's create our own animated sprite from scratch!"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:44
+msgid "Create a new scene by going to the Scene menu and selecting [b]New Scene[/b]."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:48
+msgid "Create a new scene."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:59
+msgid "Adding an AnimatedSprite2D node"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:65
+msgid "Now click the %s [b]Add Node[/b] button at the top left of the Scene dock to open the node creation dialog."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:66
+msgid "When the [b]Create New Node[/b] dialog appears, search for [b]AnimatedSprite2D[/b] and double-click it to add it to your scene."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:70
+msgid "Create an AnimatedSprite2D node."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:90
+msgid "Creating a SpriteFrames resource"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:112
+msgid "The [b]AnimatedSprite2D[/b] node needs a [b]SpriteFrames[/b] resource to hold all its animations and frames."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:113
+msgid "In the [b]Inspector[/b], ensure the Animation category is expanded and locate the [b]Sprite Frames[/b] property, which is currently empty."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:114
+msgid "Click the dropdown arrow next to the empty field and select %s [b]New SpriteFrames[/b] to create the resource."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:118
+msgid "Create a SpriteFrames resource."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:142
+msgid "Opening the SpriteFrames editor"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:149
+msgid "Click on the newly created [b]SpriteFrames[/b] resource in the Inspector. This will open the SpriteFrames editor at the bottom of the screen."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:153
+msgid "Open the SpriteFrames editor."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:161
+msgid "Renaming the default animation"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:167
+msgid "You'll notice a \"default\" animation has already been created for you. Let's rename it to better match the animation we'll create."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:168
+msgid "Click on [b]default[/b] in the animation list to rename it. Type [b]run[/b] and press Enter."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:169
+msgid "It's important to give animations meaningful names because those are the names you'll use to play them in your GDScript code."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:173
+msgid "Rename the default animation to 'run'."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:184
+msgid "Adding frames to an animation"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:193
+msgid "There are multiple ways to add frames to an animation. The easiest method is to drag and drop images from the FileSystem dock."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:194
+msgid "Notice the folder [b]res://assets/lucy/run[/b] in the [b]FileSystem[/b] dock. That's where the sprites for Lucy's run animation are stored."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:200
+msgid "Selecting multiple frames"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:205
+msgid "Let's add frames to the run animation. To add multiple frames at once:"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:207
+msgid "[b]Left click[/b] on the first image file, [b]000.png[/b]"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:208
+msgid "Hold [b]Shift[/b] and [b]left click[/b] on the last file, [b]005.png[/b]"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:211
+msgid "This selects all frames in between."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:215
+msgid "Select all 6 run animation frames."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:237
+msgid "Drag and drop frames"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:244
+msgid "With the frames selected, drag and drop them into the [b]Frames View[/b] in the right side of the SpriteFrames editor."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:245
+msgid "All the selected frames will be added to your [b]run[/b] animation in sequence."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:249
+msgid "Add the 6 run frames to the animation."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:270
+msgid "Looping animations"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:276
+msgid "By default, animations are set to loop, meaning they'll play continuously rather than stopping after one cycle."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:277
+msgid "You can toggle animation looping by clicking the %s [b]Loop[/b] icon above the animation list. For a run animation, we want looping enabled (the icon should be highlighted blue)."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:284
+msgid "Previewing your animation"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:291
+msgid "Let's see how the animation looks!"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:292
+msgid "Click the %s [b]Play[/b] button to preview your animation."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:295
+msgid "Play the animation."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:299
+msgid "Adjusting animation speed"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:304
+msgid "Our run animation currently is too slow because the default animation framerate is low."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:305
+msgid "We can adjust this by changing its frame rate using the [b]FPS[/b] (Frames Per Second) field above the animation list."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:306
+msgid "Change the FPS value from [b]5.0[/b] to [b]10.0[/b]."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:307
+msgid "Think of this like a flipbook: higher FPS means flipping through the frames faster. It also makes the animation more fluid."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:311
+msgid "Change the FPS value to 10.0."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:322
+msgid "Previewing the adjusted animation"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:327
+msgid "Great job! Because the animation is looping, you can immediately see how the speed change affects the animation."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:328
+msgid "For a running animation, 10-12 FPS usually gives a good result for pixel art characters."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:335
+msgid "Conclusion"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:336
+msgid "CONTINUE"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:338
+msgid "Congratulations! You've completed the basics of using the [b]AnimatedSprite2D[/b] node to create flipbook-style animations in Godot."
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:341
+msgid "You've learned how to:"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:343
+msgid "Create and rename animations"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:344
+msgid "Change animation playback settings like speed and looping"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:345
+msgid "Add frames by dragging image files into the editor"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:346
+msgid "Preview your animations directly in the editor"
+msgstr ""
+
+#: tours/102_creating_animation/102_creating_animation.gd:350
+msgid "In the next tour, we'll explore more tools to adjust the timing of individual frames, copy and paste frames, and create more complex animation patterns."
+msgstr ""
