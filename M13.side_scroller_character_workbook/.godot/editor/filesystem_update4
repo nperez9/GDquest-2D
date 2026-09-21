@@ -1,3 +1,4 @@
+res://levels/level.tscn
 res://player/player.tscn
-res://addons/godot_tours/assets/gdtour_theme.tres
-res://addons/godot_tours/tour.gd
+res://101_in_game.tscn
+res://player/player.gd

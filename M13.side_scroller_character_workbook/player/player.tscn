@@ -68,14 +68,18 @@ animations = [{
 size = Vector2(9, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=1075634659]
+collision_mask = 3
+platform_floor_layers = 1
+platform_wall_layers = 3
 script = ExtResource("1_2ieo8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=623888763]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_cbyeo")
 animation = &"run"
 autoplay = "idle"
 frame_progress = 0.12879156
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=503395918]
-position = Vector2(0.5, 5)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_8t03j")

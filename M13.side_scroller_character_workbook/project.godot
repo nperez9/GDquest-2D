@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="M13. Side-Scroller Character (Workbook)"
-run/main_scene="uid://3xjba3qqicu2"
+run/main_scene="uid://t3gn0esa8y5u"
 config/features=PackedStringArray("4.7", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon_platformer_small.png"
@@ -24,10 +24,6 @@ window/size/mode=2
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_tours/plugin.cfg")
 
 [gdpractice]
 
