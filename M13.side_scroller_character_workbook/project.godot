@@ -20,7 +20,6 @@ config/icon="res://icon_platformer_small.png"
 
 window/size/viewport_width=426
 window/size/viewport_height=240
-window/size/mode=2
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
