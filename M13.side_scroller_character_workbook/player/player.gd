@@ -1,15 +1,24 @@
 
 class_name Player extends CharacterBody2D
 
+@export_category("Movement")
 @export var acceleration := 500.0
 @export var deceleration := 1400.0
 @export var air_acceleration := 500.0
 @export var max_speed := 120.0
-@export var jump_gravity := 1200.0
-@export var max_gravity := 9800.0
-@export var jump_force := 380.0
+@export var max_fall_speed := 850.0
+
+@export_category("Jump")
+@export_range(10.0, 200.0) var jump_height := 50.0
+@export_range(0.1, 1.5) var jump_time_to_peak := 0.37
+@export_range(0.1, 1.5) var jump_time_to_descent := 0.2
+
+var current_gravity := 0.0
 
 @onready var _animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
+@onready var jump_speed := calculate_jump_speed(jump_height, jump_time_to_peak)
+@onready var jump_gravity := calculate_jump_gravity(jump_height, jump_time_to_peak)
+@onready var fall_gravity := calculate_fall_gravity(jump_height, jump_time_to_descent)
 
 ## First approach to state machines
 enum State {
@@ -24,6 +33,7 @@ var _current_state: State = State.GROUND
 
 func _ready() -> void:
 	_transtition_to_state(_current_state)
+	print_debug(jump_speed, " | ", jump_gravity, " | ", fall_gravity, " | ",jump_time_to_descent)
 
 func _physics_process(delta: float) -> void:
 	direction_x = signf(Input.get_axis("move_left", "move_right"))
@@ -36,7 +46,8 @@ func _physics_process(delta: float) -> void:
 		State.FALL:
 			process_fall_state(delta)
 
-	velocity.y += jump_gravity * delta
+	velocity.y += current_gravity * delta
+	velocity.y = minf(velocity.y, max_fall_speed)
 	move_and_slide()
 	
 func process_ground_state(delta: float):
@@ -91,7 +102,21 @@ func _transtition_to_state(new_state: State) -> void:
 	# Enter new state the same, can add things on transitio
 	match _current_state:
 		State.JUMP:
-			velocity.y = -1 * jump_force
+			velocity.y = jump_speed
+			current_gravity = jump_gravity
+			print_debug(current_gravity)
 			_animated_sprite_2d.play("jump")
 		State.FALL:
+			current_gravity = fall_gravity
+			print_debug(current_gravity)
 			_animated_sprite_2d.play("fall")
+
+### Phisics Stuff, Very important
+func calculate_jump_speed(height: float, time_to_peak: float) -> float:
+	return (-2.0 * height) / time_to_peak
+
+func calculate_jump_gravity(height: float, time_to_peak: float) -> float:
+	return (2.0 * height) / pow(time_to_peak, 2.0)
+
+func calculate_fall_gravity(height: float, time_to_descent: float) -> float:
+	return (2.0 * height) / pow(time_to_descent, 2.0)
