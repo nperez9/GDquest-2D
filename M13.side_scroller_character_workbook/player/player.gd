@@ -15,19 +15,32 @@ class_name Player extends CharacterBody2D
 @export_range(50.0, 200.0) var jump_horizontal_distance := 80.0
 @export_range(5.0, 50.0) var jump_cut_divider := 15.0
 
+@export_category("Double Jump")
+@export_range(10.0, 200.0) var double_jump_height := 30.0
+@export_range(0.1, 1.5) var double_jump_time_to_peak := 0.3
+@export_range(0.1, 1.5) var double_jump_time_to_descent := 0.25
+
+const MAX_JUMPS := 2
+var jump_count := 0
 var current_gravity := 0.0
 
 @onready var _animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
+@onready var coyote_timer := Timer.new()
+## Jump
 @onready var jump_speed := calculate_jump_speed(jump_height, jump_time_to_peak)
 @onready var jump_gravity := calculate_jump_gravity(jump_height, jump_time_to_peak)
 @onready var fall_gravity := calculate_fall_gravity(jump_height, jump_time_to_descent)
 @onready var jump_horizontal_speed := calculate_jump_horizontal_speed(jump_horizontal_distance, jump_time_to_peak, jump_time_to_descent)
-
+## Double Jump
+@onready var double_jump_speed := calculate_jump_speed(double_jump_height, double_jump_time_to_peak)
+@onready var double_jump_gravity := calculate_jump_gravity(double_jump_height, double_jump_time_to_peak)
+@onready var double_jump_fall_gravity := calculate_fall_gravity(double_jump_height, double_jump_time_to_descent)
 
 ## First approach to state machines
 enum State {
 	GROUND,
 	JUMP,
+	DOUBLE_JUMP,
 	FALL
 }
 
@@ -36,8 +49,11 @@ var direction_x := 0.0
 var _current_state: State = State.GROUND
 
 func _ready() -> void:
-	_transtition_to_state(_current_state)
+	_transition_to_state(_current_state)
 	print_debug(jump_speed, " | ", jump_gravity, " | ", fall_gravity, " | ",jump_time_to_descent)
+	coyote_timer.wait_time = 0.1
+	coyote_timer.one_shot = true
+	add_child(coyote_timer)
 
 func _physics_process(delta: float) -> void:
 	direction_x = signf(Input.get_axis("move_left", "move_right"))
@@ -49,6 +65,8 @@ func _physics_process(delta: float) -> void:
 			process_jump_state(delta)
 		State.FALL:
 			process_fall_state(delta)
+		State.DOUBLE_JUMP:
+			process_double_jump_state(delta)
 
 	velocity.y += current_gravity * delta
 	velocity.y = minf(velocity.y, max_fall_speed)
@@ -67,10 +85,10 @@ func process_ground_state(delta: float):
 		_animated_sprite_2d.play("idle")
 	
 	if Input.is_action_just_pressed("jump"):
-		_transtition_to_state(State.JUMP)
+		_transition_to_state(State.JUMP)
 	
 	if !is_on_floor():
-		_transtition_to_state(State.FALL)
+		_transition_to_state(State.FALL)
 		
 func process_jump_state(delta: float):
 	if direction_x != 0:
@@ -86,7 +104,17 @@ func process_jump_state(delta: float):
 			velocity.y = jump_cut_speed
 	
 	if (velocity.y >= 0.0):
-		_transtition_to_state(State.FALL)
+		_transition_to_state(State.FALL)
+
+func process_double_jump_state(delta: float):
+	if direction_x != 0:
+		velocity.x += air_acceleration * direction_x * delta
+		velocity.x = clampf(velocity.x, -jump_horizontal_speed, jump_horizontal_speed)
+		_animated_sprite_2d.flip_h = direction_x < 0.0
+	else:
+		velocity.x = 0
+	if (velocity.y >= 0.0):
+		_transition_to_state(State.FALL)
 		
 func process_fall_state(delta: float):
 	if direction_x != 0:
@@ -95,29 +123,49 @@ func process_fall_state(delta: float):
 		_animated_sprite_2d.flip_h = direction_x < 0.0
 	else:
 		velocity.x = 0
-		
-	if (is_on_floor()):
-		_transtition_to_state(State.GROUND)
 	
-func _transtition_to_state(new_state: State) -> void:
+	if Input.is_action_just_pressed("jump"):
+		if not coyote_timer.is_stopped():
+			_transition_to_state(State.JUMP)
+		elif jump_count < MAX_JUMPS:
+			_transition_to_state(State.DOUBLE_JUMP)
+	elif (is_on_floor()):
+		_transition_to_state(State.GROUND)
+	
+func _transition_to_state(new_state: State) -> void:
 	print("Transitioning from ", State.keys()[_current_state], " to ", State.keys()[new_state])
 	var previous_state := _current_state
 	_current_state = new_state
 	
 	## exit current state. can add things on exit that state EX: sounds, vfx
 	match previous_state: 
-		pass
+		State.FALL:
+			coyote_timer.stop()
 		
 	## Enter new state the same, can add things on transitio
 	match _current_state:
+		State.GROUND:
+			jump_count = 0
 		State.JUMP:
 			velocity.y = jump_speed
 			current_gravity = jump_gravity
 			velocity.x = direction_x * jump_horizontal_speed
 			_animated_sprite_2d.play("jump")
+			jump_count = 1
+		State.DOUBLE_JUMP:
+			velocity.y = double_jump_speed
+			current_gravity = double_jump_gravity
+			velocity.x = direction_x * jump_horizontal_speed
+			_animated_sprite_2d.play("jump")
+			jump_count = MAX_JUMPS
 		State.FALL:
 			current_gravity = fall_gravity
-			print_debug(current_gravity)
+			if jump_count == MAX_JUMPS:
+				current_gravity = double_jump_fall_gravity
+			else:
+				current_gravity = fall_gravity
+			if previous_state == State.GROUND:
+				coyote_timer.start()
 			_animated_sprite_2d.play("fall")
 
 ### Phisics Stuff, Very important
