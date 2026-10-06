@@ -26,6 +26,7 @@ var current_gravity := 0.0
 
 @onready var _animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 @onready var coyote_timer := Timer.new()
+@onready var particles: GPUParticles2D = %Dust
 ## Jump
 @onready var jump_speed := calculate_jump_speed(jump_height, jump_time_to_peak)
 @onready var jump_gravity := calculate_jump_gravity(jump_height, jump_time_to_peak)
@@ -57,6 +58,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	direction_x = signf(Input.get_axis("move_left", "move_right"))
+	var is_moving := absf(direction_x) > 0.0
 	
 	match _current_state:
 		State.GROUND:
@@ -84,6 +86,8 @@ func process_ground_state(delta: float):
 		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
 		_animated_sprite_2d.play("idle")
 	
+	particles.emitting = is_moving
+
 	if Input.is_action_just_pressed("jump"):
 		_transition_to_state(State.JUMP)
 	
@@ -133,7 +137,6 @@ func process_fall_state(delta: float):
 		_transition_to_state(State.GROUND)
 	
 func _transition_to_state(new_state: State) -> void:
-	print("Transitioning from ", State.keys()[_current_state], " to ", State.keys()[new_state])
 	var previous_state := _current_state
 	_current_state = new_state
 	
@@ -141,23 +144,28 @@ func _transition_to_state(new_state: State) -> void:
 	match previous_state: 
 		State.FALL:
 			coyote_timer.stop()
-		
+		State.GROUND:
+			particles.emitting = false
 	## Enter new state the same, can add things on transitio
 	match _current_state:
 		State.GROUND:
 			jump_count = 0
+			if previous_state == State.FALL:
+				play_tween_touch_ground()
 		State.JUMP:
 			velocity.y = jump_speed
 			current_gravity = jump_gravity
 			velocity.x = direction_x * jump_horizontal_speed
 			_animated_sprite_2d.play("jump")
 			jump_count = 1
+			play_tween_jump()
 		State.DOUBLE_JUMP:
 			velocity.y = double_jump_speed
 			current_gravity = double_jump_gravity
 			velocity.x = direction_x * jump_horizontal_speed
 			_animated_sprite_2d.play("jump")
 			jump_count = MAX_JUMPS
+			play_tween_jump()		
 		State.FALL:
 			current_gravity = fall_gravity
 			if jump_count == MAX_JUMPS:
@@ -180,3 +188,16 @@ func calculate_fall_gravity(height: float, time_to_descent: float) -> float:
 
 func calculate_jump_horizontal_speed(distance: float, time_to_peak: float, time_to_descent: float) -> float:
 	return distance / (time_to_peak + time_to_descent)
+
+
+func play_tween_jump() -> void:
+	var tween := create_tween()
+	tween.tween_property(_animated_sprite_2d, "scale", Vector2(1.15, 0.86), 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween.tween_property(_animated_sprite_2d, "scale", Vector2(0.86, 1.15), 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween.tween_property(_animated_sprite_2d, "scale", Vector2.ONE, 0.15)
+
+func play_tween_touch_ground() -> void:
+	var tween := create_tween()
+	tween.tween_property(_animated_sprite_2d, "scale", Vector2(0.9, 1.1), 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween.tween_property(_animated_sprite_2d, "scale", Vector2(1.1, 0.9), 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween.tween_property(_animated_sprite_2d, "scale", Vector2.ONE, 0.15)

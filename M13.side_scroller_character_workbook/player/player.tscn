@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dw8wfsxexlcit" path="res://assets/lucy/run/004.png" id="7_kb6p2"]
 [ext_resource type="Texture2D" uid="uid://2xur0ruvk44k" path="res://assets/lucy/jump.png" id="8_32hag"]
 [ext_resource type="Texture2D" uid="uid://pk8wb3owg84f" path="res://assets/lucy/run/005.png" id="8_wodsf"]
+[ext_resource type="Texture2D" uid="uid://vcwnftmgqlr4" path="res://assets/lucy/dust_particle.png" id="15_wodsf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cbyeo"]
 animations = [{
@@ -94,20 +95,54 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8t03j"]
 size = Vector2(9, 12)
 
+[sub_resource type="Curve" id="Curve_32hag"]
+_data = [Vector2(0.008163266, 1), 0.0, 0.0, 0, 0, Vector2(0.5612245, 0.5964126), -2.7466364, -2.7466364, 0, 0, Vector2(0.99591845, 0.011210799), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wodsf"]
+curve = SubResource("Curve_32hag")
+
+[sub_resource type="Curve" id="Curve_wodsf"]
+_limits = [0.47309422, 1.3, 0.0, 1.0]
+_data = [Vector2(0, 1.0385592), 0.0, 0.0, 0, 0, Vector2(0.37746173, 0.7513704), -0.5744822, -0.5744822, 0, 0, Vector2(0.9967177, 0.47903615), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_e7oew"]
+curve = SubResource("Curve_wodsf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kb6p2"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+initial_velocity_min = -10.0
+initial_velocity_max = -10.0
+gravity = Vector3(0, -8, 0)
+scale_min = 0.7
+scale_max = 1.3
+scale_curve = SubResource("CurveTexture_e7oew")
+alpha_curve = SubResource("CurveTexture_wodsf")
+
 [node name="Player" type="CharacterBody2D" unique_id=1075634659]
 collision_mask = 3
 platform_floor_layers = 1
 platform_wall_layers = 3
 script = ExtResource("1_2ieo8")
-max_gravity = 1200.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=623888763]
 unique_name_in_owner = true
+position = Vector2(0, 11)
 sprite_frames = SubResource("SpriteFrames_cbyeo")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.9203172
+offset = Vector2(0, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=503395918]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_8t03j")
+
+[node name="Dust" type="GPUParticles2D" parent="." unique_id=983504642]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(0, 11)
+amount = 4
+texture = ExtResource("15_wodsf")
+process_material = SubResource("ParticleProcessMaterial_kb6p2")

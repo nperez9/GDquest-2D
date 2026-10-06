@@ -1,4 +1,5 @@
-res://levels/level.tscn
+res://player/player.gd
+res://player/player.tscn
 res://addons/gdpractice/assets/theme.tres
 res://addons/godot_tours/assets/gdtour_theme.tres
-res://player/player.gd
+res://levels/level.tscn
